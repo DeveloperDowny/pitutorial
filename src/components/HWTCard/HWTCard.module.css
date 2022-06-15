@@ -1,0 +1,40 @@
+.courseCard__image__container {
+    margin: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* width: 100pz; */
+    /* width: 84px; */
+    /* height: 84px; */
+    /* position: relative; */
+}
+
+.courseCard {
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+}
+
+.hwtCardContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.pText {
+    margin: 0;
+    text-align: center;
+    font-size: 30pt;
+    font-family: 'Open sans', serif;
+    color: var(--blackAlternate)
+}
+
+.pTextSmall {
+    margin: 0;
+    text-align: center;
+    font-size: 16pt;
+    font-family: 'Open sans', serif;
+    color: var(--blackAlternate)
+}

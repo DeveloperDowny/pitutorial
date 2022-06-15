@@ -1,0 +1,8 @@
+.courses__courseCard__container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
