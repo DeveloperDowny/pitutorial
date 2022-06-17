@@ -1,0 +1,4 @@
+create a hook for which active and pass it to NavBar
+then extract NavBar from everything and add it to the homem
+don't know if this is possible
+do optimization later

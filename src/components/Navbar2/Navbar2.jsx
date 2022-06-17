@@ -66,7 +66,13 @@ const Navbar = ({ whichActive }) => {
             </a>
           </Link>
           <Link href="/join-us">
-            <a className={styles.test}>JOIN US</a>
+            <a
+              className={
+                whichActive != "join_us" ? styles.test : styles.text__underlined
+              }
+            >
+              JOIN US
+            </a>
           </Link>
         </div>
       </div>

@@ -4,5 +4,14 @@ import Heading1 from "./Heading1/Heading1";
 import CourseCard from "./CourseCard/CourseCard";
 import HWTCard from "./HWTCard/HWTCard";
 import LocationCard from "./LocationCard/LocationCard";
+import InputField from "./InputField/InputField";
 
-export { Navbar, Navbar2, Heading1, CourseCard, HWTCard, LocationCard };
+export {
+  Navbar,
+  Navbar2,
+  Heading1,
+  CourseCard,
+  HWTCard,
+  LocationCard,
+  InputField,
+};
