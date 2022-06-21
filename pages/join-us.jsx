@@ -1,6 +1,19 @@
 import { Heading1, InputField, Navbar2 as Navbar } from "../src/components";
+import { useRef, useState, useEffect } from "react";
+import gsap from "gsap";
 
 const JoinUs = () => {
+  let labelRef = useRef(null);
+  const [fullName, setFullName] = useState("");
+  // let inRef = useRef(null);
+  // const [postData, setPostData] = useState({
+  //   full_name: "",
+  //   phone_no: "",
+  //   email_add: "",
+  //   wantToApplyAs: "",
+  // });
+  let tween;
+
   return (
     <div>
       <Navbar whichActive={"join_us"} />
@@ -9,10 +22,26 @@ const JoinUs = () => {
           <div>
             <Heading1 title={"Join Us"} />
           </div>
-          <p className="pTextSmall">
+          <p
+            style={{
+              marginBottom: "2.5rem",
+            }}
+            className="pTextSmall"
+          >
             Fill the following form to schedule a call
           </p>
-          <InputField title={"Full Name"} />
+          {/* <InputField title={"Full Name"} /> */}
+
+          <InputField
+            ph={"Full Name"}
+            propName={"full_name"}
+            labelRef={labelRef}
+            tween={tween}
+            setPostData={setFullName}
+            postData={fullName}
+          />
+
+          <p>{fullName}</p>
           {/* <InputField />
           <InputField />
           <InputField /> */}
