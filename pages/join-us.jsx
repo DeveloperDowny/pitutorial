@@ -1,50 +1,69 @@
 import { Heading1, InputField, Navbar2 as Navbar } from "../src/components";
-import { useRef, useState, useEffect } from "react";
-import gsap from "gsap";
+import { useRef, useState } from "react";
 
 const JoinUs = () => {
-  let labelRef = useRef(null);
+  // let labelRef = useRef(null);
   const [fullName, setFullName] = useState("");
-  // let inRef = useRef(null);
-  // const [postData, setPostData] = useState({
-  //   full_name: "",
-  //   phone_no: "",
-  //   email_add: "",
-  //   wantToApplyAs: "",
-  // });
-  let tween;
+  const [phoneNo, setPhoneNo] = useState("");
+  const [emailAdd, setEmailAdd] = useState("");
+  const [custom, setCustom] = useState("");
 
   return (
     <div>
       <Navbar whichActive={"join_us"} />
       <div className={`offWhiteBg superContainer`}>
-        <div className="mainContainer">
+        <div className="formContainer">
           <div>
             <Heading1 title={"Join Us"} />
           </div>
           <p
             style={{
-              marginBottom: "2.5rem",
+              marginBottom: "2rem",
             }}
             className="pTextSmall"
           >
             Fill the following form to schedule a call
           </p>
-          {/* <InputField title={"Full Name"} /> */}
 
           <InputField
             ph={"Full Name"}
-            propName={"full_name"}
-            labelRef={labelRef}
-            tween={tween}
+            labelRef={useRef(null)}
             setPostData={setFullName}
             postData={fullName}
           />
 
-          <p>{fullName}</p>
-          {/* <InputField />
-          <InputField />
-          <InputField /> */}
+          <InputField
+            ph={"Phone no."}
+            labelRef={useRef(null)}
+            setPostData={setPhoneNo}
+            postData={phoneNo}
+          />
+          <InputField
+            ph={"Email Address"}
+            labelRef={useRef(null)}
+            setPostData={setEmailAdd}
+            postData={emailAdd}
+          />
+          <InputField
+            ph={"Why should we hire you?"}
+            labelRef={useRef(null)}
+            setPostData={setCustom}
+            postData={custom}
+          />
+          <div
+            className="flexCenter"
+            style={{ alignItems: "flex-end", marginRight: "2rem" }}
+          >
+            <button
+              style={{ marginBottom: "2rem" }}
+
+              // style={{ minWidth: "242px" }}
+            >
+              Submit
+            </button>
+          </div>
+
+          {/* <p>{fullName}</p> */}
         </div>
       </div>
     </div>
