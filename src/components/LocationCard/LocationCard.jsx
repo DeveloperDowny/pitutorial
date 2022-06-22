@@ -96,7 +96,7 @@ const LocationCard = ({ mimg, title, desc }) => {
             }}
             className="pTextSmall"
           >
-            +91 782 1865 157
+            <a href="tel:+918975803664">+91 782 1865 157</a>
           </p>
         </div>
       </div>

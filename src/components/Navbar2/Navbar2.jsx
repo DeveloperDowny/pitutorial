@@ -77,11 +77,13 @@ const Navbar = ({ whichActive }) => {
         </div>
       </div>
       <div>
-        <img
-          className={`${styles.dropShadow}`}
-          src={badge.src}
-          style={{ height: "125%", margin: "-1px 3rem 0 0" }}
-        />
+        <a href="tel:+8975803664">
+          <img
+            className={`${styles.dropShadow}`}
+            src={badge.src}
+            style={{ height: "125%", margin: "-1px 3rem 0 0" }}
+          />
+        </a>
       </div>
     </div>
   );

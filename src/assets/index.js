@@ -15,6 +15,13 @@ import doubtSolving from "./res/doubt-solving.png";
 import smallBatches from "./res/lectures.png";
 import books from "./res/books.jpg";
 import tests from "./res/test.png";
+import results from "./res/results.jpg";
+import result_f from "./res/result_f.png";
+import jnr_final from "./res/jnr_final.jpg";
+import kh from "./res/kh.jpg";
+import kh3 from "./res/kh.webp";
+import kh2 from "./res/kh2.png";
+import vp from "./res/vp.jpg";
 
 export {
   pit_logo,
@@ -34,4 +41,10 @@ export {
   smallBatches,
   books,
   tests,
+  results,
+  result_f,
+  kh,
+  kh3,
+  kh2,
+  vp,
 };

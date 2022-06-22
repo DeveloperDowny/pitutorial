@@ -5,6 +5,7 @@ import CourseCard from "./CourseCard/CourseCard";
 import HWTCard from "./HWTCard/HWTCard";
 import LocationCard from "./LocationCard/LocationCard";
 import InputField from "./InputField/InputField";
+import Footer from "./Footer/Footer";
 
 export {
   Navbar,
@@ -14,4 +15,5 @@ export {
   HWTCard,
   LocationCard,
   InputField,
+  Footer,
 };

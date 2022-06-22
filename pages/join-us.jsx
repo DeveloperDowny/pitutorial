@@ -1,4 +1,9 @@
-import { Heading1, InputField, Navbar2 as Navbar } from "../src/components";
+import {
+  Footer,
+  Heading1,
+  InputField,
+  Navbar2 as Navbar,
+} from "../src/components";
 import { useRef, useState } from "react";
 
 const JoinUs = () => {
@@ -45,7 +50,9 @@ const JoinUs = () => {
             postData={emailAdd}
           />
           <InputField
-            ph={"Why should we hire you?"}
+            ph={
+              "About You (experience, preferred job role, certifications, etc.)"
+            }
             labelRef={useRef(null)}
             setPostData={setCustom}
             postData={custom}
@@ -59,12 +66,22 @@ const JoinUs = () => {
 
               // style={{ minWidth: "242px" }}
             >
-              Submit
+              <a
+                href={`mailto:vedantpanchal12345@gmail.com?subject=${fullName}'s Job Application For Pi TUTORIAL&body=${
+                  `Full Name:%0d%0a${fullName}%0d%0a%0d%0a` +
+                  `Phone. No.:%0d%0a${phoneNo}%0d%0a%0d%0a` +
+                  `Email Address:%0d%0a${emailAdd}%0d%0a%0d%0a` +
+                  `About Me:%0d%0a${custom}%0d%0a%0d%0a`
+                }`}
+              >
+                Submit
+              </a>
             </button>
           </div>
 
           {/* <p>{fullName}</p> */}
         </div>
+        <Footer />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import gsap, { shuffle } from "gsap";
 
 const InputField = ({
@@ -8,6 +8,7 @@ const InputField = ({
 
   ph,
 }) => {
+  const [phToTitle, setPhToTitle] = useState(ph);
   return (
     <div
       style={{
@@ -28,6 +29,12 @@ const InputField = ({
           left: "2.5rem",
         }}
         onClick={(e) => {
+          if (
+            ph ===
+            "About You (experience, preferred job role, certifications, etc.)"
+          ) {
+            setPhToTitle("About You");
+          }
           gsap.to(labelRef.current, {
             y: "-2.5rem",
             scale: "1.2",
@@ -38,15 +45,17 @@ const InputField = ({
           // document.getElementsByTagName("input")[0].focus();
         }}
       >
-        {ph}
+        {phToTitle}
       </p>
 
-      {ph === "Why should we hire you?" ? (
+      {ph ===
+      "About You (experience, preferred job role, certifications, etc.)" ? (
         <textarea
           onChange={(e) => {
             setPostData(e.target.value);
           }}
           onClick={(e) => {
+            setPhToTitle("About You");
             gsap.to(labelRef.current, {
               y: "-2.5rem",
               scale: "1.2",
@@ -56,14 +65,20 @@ const InputField = ({
           }}
           onBlur={(e) => {
             if (e.target.value == "") {
-              console.log("reversed");
-
               gsap.to(labelRef.current, {
                 y: "0",
                 scale: "1",
 
                 duration: 0.1,
+                onComplete: () => {
+                  setPhToTitle(
+                    "About You (experience, preferred job role, certifications, etc.)"
+                  );
+                },
               });
+              // .onComplete(() => {
+              //   ;
+              // });
             }
           }}
           rows={"5"}
