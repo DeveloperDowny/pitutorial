@@ -1,23 +1,54 @@
-import {
-  Heading1,
-  Navbar2 as Navbar,
-  CourseCard,
-  HWTCard,
-} from "../src/components";
+import { Heading1, Navbar2 as Navbar } from "../src/components";
 
 import { JEE, result_f } from "../src/assets";
 import styles from "../styles/results.module.css";
 
+const ResImgFinal = ({ resImg }) => {
+  return (
+    <div
+      className="final"
+      style={{
+        width: "865px",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
+      <img
+        style={{
+          objectFit: "contain",
+          position: "absolute",
+          zIndex: 1,
+        }}
+        height={"100%"}
+        src={resImg.src}
+        alt=""
+      />
+      <img
+        className={styles.bgImg}
+        width="865px"
+        // height="60vh"
+        src={resImg.src}
+        alt=""
+        style={{
+          objectFit: "cover",
+          position: "absolute",
+          position: "top",
+          zIndex: -11,
+          filter: "blur(5px)",
+        }}
+      />
+    </div>
+  );
+};
 const ResultImg = ({ resultImg }) => {
   return (
     <div
+      className="result_img__container"
       style={{
+        // width: "min-content",
         display: "flex",
-
-        // width: "2000px",
-        width: "100%",
-        // flex: "1",
-        height: "100%",
+        // width: "100%",
+        // height: "100%",
         justifyContent: "center",
         alignItems: "center",
       }}
@@ -26,7 +57,7 @@ const ResultImg = ({ resultImg }) => {
         style={{
           position: "absolute",
           objectFit: "contain",
-          // width: "100%",
+
           height: "100%",
 
           zIndex: 5,
@@ -35,7 +66,7 @@ const ResultImg = ({ resultImg }) => {
       />
       <img
         style={{
-          width: "100%",
+          width: "865px",
 
           position: "absolute",
           zIndex: -5,
@@ -49,40 +80,19 @@ const ResultImg = ({ resultImg }) => {
 };
 const Card = ({ title }) => {
   return (
-    <div
-      className={`roundCorner dropShadow ${styles.courseCard}`}
-      // style={{ maxWidth: "max-content" }}
-    >
+    <div className={`roundCorner dropShadow ${styles.courseCard}`}>
       <div
         className={`flexCenter ${styles.courseCard__container}`}
         style={{
           height: "100%",
           padding: "0.5rem 2rem",
-          // alignItems: "center",
         }}
       >
         <p
           className="pTextSmall"
           style={{
-            // padding: "3rem 0rem",
-            // height: "100%",
-            // alignItems: "center",
-            // justifyContent: "center",
-            // margin: "auto",
-
             fontSize: "1rem",
             width: "140px",
-            // width: "150px",
-            // height: "100%",
-            // alignItems: "flex-start",
-            // justifyContent: "flex-start",
-            // verticalAlign: "flex-end",
-            // margin: "auto 1rem",
-            // alignSelf: "center",
-
-            // margin: 0,
-            // textAlign: "center",
-            // height: "113px",
           }}
         >
           {title}
@@ -103,8 +113,7 @@ const Results = () => {
             style={{
               width: "100%",
               marginTop: "4rem",
-              // height,
-              // height: "min-content",
+
               height: "189px",
             }}
           >
@@ -156,41 +165,28 @@ const Results = () => {
             <Heading1 title={"Results"} />
           </div>
 
-          <div className="flexCenter" style={{ width: "100%", height: "100%" }}>
+          <div
+            className="flexCenter animated_results__container"
+            style={{ width: "865px", height: "100%" }}
+          >
             <div
-              // className="flexCenter"
               style={{
                 display: "flex",
                 flexDirection: "row",
-                // position: "absolute",
-                // top: "4.5rem",
-                // margin: "50%",
+
                 marginBottom: "-2rem",
-                // width: "100%",
-                // height: "100%",
               }}
             >
-              <Card
-                title="100%
-Results"
-              />
-              <Card
-                title="Admission in 
-Reputed Colleges"
-              />
+              <Card title="100% Results" />
+              <Card title="Admission in Reputed Colleges" />
               <Card title="Top Rankers" />
-            </div>
-            <div>
-              <ResultImg resultImg={JEE} />
-              <ResultImg resultImg={JEE} />
-              <ResultImg resultImg={JEE} />
             </div>
             <div
               className="flexCenter roundCorner dropShadow"
               style={{
-                width: "100%",
                 // width: "max-content",
-                // overflowX: " scroll",
+                width: "865px",
+
                 background: "white",
                 marginBottom: "3rem",
                 flexDirection: "row",
@@ -201,16 +197,55 @@ Reputed Colleges"
                 alignItems: "flex-start",
               }}
             >
-              <ResultImg resultImg={JEE} />
-              {/* <ResultImg resultImg={JEE} /> */}
-              {/* <ResultImg resultImg={JEE} /> */}
-              {/* <ResultImg resultImg={JEE} /> */}
+              {/* <div
+                className="flexCenter roundCorner dropShadow"
+                style={{
+                  // width: "max-content",
+                  width: "max-content",
 
-              {/* <ResultImg resultImg={JEE} /> */}
-              {/* <ResultImg resultImg={JEE} /> */}
+                  background: "white",
+                  marginBottom: "3rem",
+                  flexDirection: "row",
+                  overflow: "hidden",
+                  height: "60vh",
+                  zIndex: -1,
+                  justifyContent: "flex-start",
+                  alignItems: "flex-start",
+                }}
+              >
+                <ResultImg resultImg={JEE} />
+              </div> */}
+              <div
+                style={{
+                  width: "max-content",
+                  display: "flex",
+                  flexDirection: "row",
+                }}
+              >
+                <ResImgFinal resImg={JEE} />
+                <ResImgFinal resImg={JEE} />
+              </div>
             </div>
           </div>
+
+          {/* <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              width: "max-content",
+            }}
+          >
+            <div>
+              <img width={"100%"} src={result_f.src} alt="" />
+              {/* <img width={"100%"} src={result_f.src} alt="" /> */}
         </div>
+        {/* 
+            <div>
+              {/* <img width={"100%"} src={result_f.src} alt="" /> 
+              <img width={"100%"} src={result_f.src} alt="" />
+            </div> */}
+        {/* </div> */}
+        {/* </div> */}
       </div>
     </div>
   );

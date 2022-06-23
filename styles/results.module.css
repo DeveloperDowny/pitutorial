@@ -27,3 +27,7 @@
     height: 100%;
     align-items: center;
 }
+
+.bgImg {
+    height: 60vh;
+}

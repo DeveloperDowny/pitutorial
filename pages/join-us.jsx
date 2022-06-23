@@ -61,22 +61,22 @@ const JoinUs = () => {
             className="flexCenter"
             style={{ alignItems: "flex-end", marginRight: "2rem" }}
           >
-            <button
-              style={{ marginBottom: "2rem" }}
-
-              // style={{ minWidth: "242px" }}
+            <a
+              href={`mailto:vedantpanchal12345@gmail.com?subject=${fullName}'s Job Application For Pi TUTORIAL&body=${
+                `Full Name:%0d%0a${fullName}%0d%0a%0d%0a` +
+                `Phone. No.:%0d%0a${phoneNo}%0d%0a%0d%0a` +
+                `Email Address:%0d%0a${emailAdd}%0d%0a%0d%0a` +
+                `About Me:%0d%0a${custom}%0d%0a%0d%0a<Attach your resume with this mail>`
+              }`}
             >
-              <a
-                href={`mailto:vedantpanchal12345@gmail.com?subject=${fullName}'s Job Application For Pi TUTORIAL&body=${
-                  `Full Name:%0d%0a${fullName}%0d%0a%0d%0a` +
-                  `Phone. No.:%0d%0a${phoneNo}%0d%0a%0d%0a` +
-                  `Email Address:%0d%0a${emailAdd}%0d%0a%0d%0a` +
-                  `About Me:%0d%0a${custom}%0d%0a%0d%0a`
-                }`}
+              <button
+                style={{ marginBottom: "2rem" }}
+
+                // style={{ minWidth: "242px" }}
               >
                 Submit
-              </a>
-            </button>
+              </button>
+            </a>
           </div>
 
           {/* <p>{fullName}</p> */}
