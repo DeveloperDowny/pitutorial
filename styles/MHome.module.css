@@ -31,3 +31,12 @@
 .bgImg {
     height: 60vh;
 }
+
+.pText {
+    margin: 0;
+    text-align: center;
+    font-size: 24pt;
+    font-family: 'Open sans', serif;
+    font-weight: normal;
+    color: var(--blackAlternate)
+}
