@@ -22,6 +22,7 @@ import kh from "./res/kh.jpg";
 import kh3 from "./res/kh.webp";
 import kh2 from "./res/kh2.png";
 import vp from "./res/vp.jpg";
+import pit_logo_bl from "./images/pit_logo_bl.png";
 
 export {
   pit_logo,
@@ -47,4 +48,5 @@ export {
   kh3,
   kh2,
   vp,
+  pit_logo_bl,
 };

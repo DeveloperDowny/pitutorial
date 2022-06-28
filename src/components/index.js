@@ -6,6 +6,7 @@ import HWTCard from "./HWTCard/HWTCard";
 import LocationCard from "./LocationCard/LocationCard";
 import InputField from "./InputField/InputField";
 import Footer from "./Footer/Footer";
+import MHome from "./Home/MHome";
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   LocationCard,
   InputField,
   Footer,
+  MHome,
 };

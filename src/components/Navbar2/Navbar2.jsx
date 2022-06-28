@@ -18,10 +18,12 @@ const Navbar = ({ whichActive }) => {
       }}
     >
       <div>
-        <img
-          src={pit_logo.src}
-          style={{ height: "100%", padding: "1rem", margin: "0 0 0 10rem" }}
-        />
+        <a href="/">
+          <img
+            src={pit_logo.src}
+            style={{ height: "100%", padding: "1rem", margin: "0 0 0 10rem" }}
+          />
+        </a>
       </div>
       <div
         className={`${styles.linksText}`}
@@ -42,7 +44,13 @@ const Navbar = ({ whichActive }) => {
           }}
         >
           <Link href="/results">
-            <a className={styles.test}>RESULTS</a>
+            <a
+              className={
+                whichActive != "results" ? styles.test : styles.text__underlined
+              }
+            >
+              RESULTS
+            </a>
           </Link>
 
           <Link href="/courses">

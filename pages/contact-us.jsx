@@ -5,6 +5,7 @@ import {
   CourseCard,
   HWTCard,
   LocationCard,
+  Footer,
 } from "../src/components";
 import styles from "../styles/contactUs.module.css";
 
@@ -22,6 +23,7 @@ const ContactUs = () => {
             <LocationCard mimg={JEE} title="Vasai" />
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

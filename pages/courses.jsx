@@ -3,6 +3,7 @@ import {
   Navbar2 as Navbar,
   CourseCard,
   HWTCard,
+  Footer,
 } from "../src/components";
 import {
   basicsToAdvance,
@@ -76,6 +77,7 @@ const Courses = () => {
             <HWTCard title={"Test Series"} mimg={tests} />
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

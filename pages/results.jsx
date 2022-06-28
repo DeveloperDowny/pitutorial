@@ -1,7 +1,9 @@
-import { Heading1, Navbar2 as Navbar } from "../src/components";
+import { Footer, Heading1, Navbar2 as Navbar } from "../src/components";
 
-import { JEE, result_f } from "../src/assets";
+import { JEE, NEET, result_f } from "../src/assets";
 import styles from "../styles/results.module.css";
+import gsap from "gsap";
+import { useRef, useEffect } from "react";
 
 const ResImgFinal = ({ resImg }) => {
   return (
@@ -26,7 +28,6 @@ const ResImgFinal = ({ resImg }) => {
       <img
         className={styles.bgImg}
         width="865px"
-        // height="60vh"
         src={resImg.src}
         alt=""
         style={{
@@ -40,44 +41,7 @@ const ResImgFinal = ({ resImg }) => {
     </div>
   );
 };
-const ResultImg = ({ resultImg }) => {
-  return (
-    <div
-      className="result_img__container"
-      style={{
-        // width: "min-content",
-        display: "flex",
-        // width: "100%",
-        // height: "100%",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <img
-        style={{
-          position: "absolute",
-          objectFit: "contain",
 
-          height: "100%",
-
-          zIndex: 5,
-        }}
-        src={resultImg.src}
-      />
-      <img
-        style={{
-          width: "865px",
-
-          position: "absolute",
-          zIndex: -5,
-          filter: "blur(5px)",
-          objectFit: "cover",
-        }}
-        src={resultImg.src}
-      />
-    </div>
-  );
-};
 const Card = ({ title }) => {
   return (
     <div className={`roundCorner dropShadow ${styles.courseCard}`}>
@@ -103,9 +67,74 @@ const Card = ({ title }) => {
 };
 
 const Results = () => {
+  const titleRef = useRef(null);
+  let marginLeftVal = 100;
+  let marginLeftConst = marginLeftVal;
+  const delayTime = 1;
+  const dur = 2;
+  let counter = 1;
+  let anim;
+  let shouldPlayCount = 0;
+  let numOfImages = 3;
+  function repeatAnim() {
+    if (counter > numOfImages) {
+      // document.querySelector("#toAnimate").style["flex-direction"] = "row-reverse";
+      if (document.querySelector("#toAnimate") == null) {
+        return;
+      }
+      document.querySelector("#toAnimate").style["margin-left"] = "0px";
+
+      marginLeftVal = 0;
+      counter = 0;
+      // return;
+      // ("this is kind of working. You would need to have last image same as the first. Then programmatically reset every marginLeftVal etc to run smoothly")
+      // return;
+    }
+    marginLeftVal += marginLeftConst;
+    console.log(marginLeftVal);
+    console.log(++counter);
+    gsap
+      .to("#toAnimate", {
+        marginLeft: `-${marginLeftVal}%`,
+        duration: dur,
+
+        onComplete: repeatAnim,
+        // delay: 5,
+      })
+      .delay(delayTime);
+  }
+  useEffect(() => {
+    // console.log("in use effect");
+    shouldPlayCount += 1;
+    if (shouldPlayCount == 2) {
+      anim = gsap
+        .to("#toAnimate", {
+          marginLeft: `-${marginLeftVal}%`,
+          duration: dur,
+          onComplete: repeatAnim,
+          // onComplete: () => {
+          //   counter++;
+          //   console.log(counter);
+          // },
+          // delay: 5,
+        })
+        .delay(delayTime);
+      // .delay(delayTime);
+    }
+
+    // anim.repeat(5);
+  }, []);
+
+  // let anim = gsap.to(useRef, {
+  //   marginLeft: "-3rem",
+  //   opacity: "0",
+  //   duration: 0.5,
+  // });
+
+  // console.log(anim.delay);
   return (
     <div>
-      <Navbar whichActive={"Results"} />
+      <Navbar whichActive={"results"} />
       <div className={`offWhiteBg superContainer`}>
         <div className="mainContainer">
           <div
@@ -120,6 +149,7 @@ const Results = () => {
             <div
               className="flexCenter"
               style={{
+                zIndex: "11",
                 height: "100%",
                 paddingLeft: "1rem",
                 position: "absolute",
@@ -155,6 +185,11 @@ const Results = () => {
               style={{
                 objectFit: "cover",
                 width: "100%",
+                // filter: "blur(5px)",
+                zIndex: "-20",
+                // scale: "1.6",
+                // filter: "blur(5px)",
+                // zIndex: "-10",
 
                 height: "100%",
               }}
@@ -167,7 +202,7 @@ const Results = () => {
 
           <div
             className="flexCenter animated_results__container"
-            style={{ width: "865px", height: "100%" }}
+            style={{ width: "865px", height: "100%", zIndex: "11" }}
           >
             <div
               style={{
@@ -184,68 +219,51 @@ const Results = () => {
             <div
               className="flexCenter roundCorner dropShadow"
               style={{
-                // width: "max-content",
                 width: "865px",
-
+                zIndex: "11",
                 background: "white",
                 marginBottom: "3rem",
                 flexDirection: "row",
                 overflow: "hidden",
+                // overflowX: "scroll",
+                // scrollbarWidth: "none",
+                // scrollbarGutter: "none",
+
+                //  -ms-overfanimlow-style: "none",
+
                 height: "60vh",
                 zIndex: -1,
                 justifyContent: "flex-start",
                 alignItems: "flex-start",
               }}
             >
-              {/* <div
-                className="flexCenter roundCorner dropShadow"
-                style={{
-                  // width: "max-content",
-                  width: "max-content",
-
-                  background: "white",
-                  marginBottom: "3rem",
-                  flexDirection: "row",
-                  overflow: "hidden",
-                  height: "60vh",
-                  zIndex: -1,
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
-                }}
-              >
-                <ResultImg resultImg={JEE} />
-              </div> */}
               <div
+                ref={titleRef}
+                id="toAnimate"
                 style={{
-                  width: "max-content",
+                  // position: "absolute",
+                  // marginLeft: "-3rem", // animate this property
                   display: "flex",
                   flexDirection: "row",
+                  width: "max-content",
+                  // overflowX: "scroll",
+                  // overflowY: "hidden",
+                  // msOverflowStyle: "none",
+                  // scrollbarWidth: "none",
                 }}
               >
+                {/* noOfImages = effective images-1 */}
                 <ResImgFinal resImg={JEE} />
+                <ResImgFinal resImg={NEET} />
+                <ResImgFinal resImg={NEET} />
+                <ResImgFinal resImg={NEET} />
+                {/* above is effective images. Below image should be same as the first one */}
                 <ResImgFinal resImg={JEE} />
               </div>
             </div>
           </div>
-
-          {/* <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              width: "max-content",
-            }}
-          >
-            <div>
-              <img width={"100%"} src={result_f.src} alt="" />
-              {/* <img width={"100%"} src={result_f.src} alt="" /> */}
         </div>
-        {/* 
-            <div>
-              {/* <img width={"100%"} src={result_f.src} alt="" /> 
-              <img width={"100%"} src={result_f.src} alt="" />
-            </div> */}
-        {/* </div> */}
-        {/* </div> */}
+        <Footer />
       </div>
     </div>
   );
