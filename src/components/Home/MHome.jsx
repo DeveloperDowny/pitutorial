@@ -5,7 +5,47 @@ import styles from "../../../styles/MHome.module.css";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
 
-const Card = ({ title, subTitle, desc, imgUrl, reversed }) => {
+const Card = ({ title, subTitle, desc, imgUrl, reversed, animRef }) => {
+  const delayTime = 1;
+  const dur = 2;
+  let shouldPlayCount = 1;
+  let anim;
+  function repeatAnim() {
+    gsap
+      .from(animRef, {
+        marginLeft: `-100%`,
+        duration: dur,
+
+        onComplete: repeatAnim,
+        // delay: 5,
+      })
+      .delay(delayTime);
+  }
+
+  useEffect(() => {
+    // console.log("in use effect");
+
+    shouldPlayCount += 1;
+    if (shouldPlayCount == 2) {
+      anim = gsap
+        .from(animRef, {
+          marginTop: `-100%`,
+          duration: dur,
+          onComplete: repeatAnim, //temp
+          // onComplete: () => {
+          //   counter++;
+          //   console.log(counter);
+          // },
+          // delay: 5,
+        })
+        .delay(delayTime)
+        .pause();
+      // .pause();
+      // .delay(delayTime);
+    }
+
+    // anim.repeat(5);
+  }, []);
   return (
     <div
       style={{
@@ -15,6 +55,71 @@ const Card = ({ title, subTitle, desc, imgUrl, reversed }) => {
         // justifyContent: "center",
       }}
     >
+      <div
+        ref={animRef}
+        className="dropShadow"
+        style={{
+          color: "white",
+          top: "33vh",
+          // left: "10%",
+          // right: "10%",
+          // margin: "10%",
+          margin: 0,
+          padding: "0 10%",
+          // height: "100vh",
+          // objectFit: "cover",
+          // width: "100%",
+          position: "absolute",
+          zIndex: "-24",
+          display: "flex",
+          width: "100%",
+          flexDirection: "column",
+          alignItems: reversed ? "flex-end" : "flex-start",
+          justifyContent: reversed ? "flex-end" : "flex-start",
+        }}
+      >
+        <h1
+          className="h1Text"
+          style={{
+            color: "white",
+            textAlign: reversed ? "right" : "left",
+            padding: 0,
+            margin: 0,
+            paddingTop: "97px",
+            fontFamily: "Open sans",
+            fontWeight: 600,
+          }}
+        >
+          {title}
+        </h1>
+        <p
+          className={styles.pText}
+          style={{
+            color: "white",
+            textAlign: reversed ? "right" : "left",
+            // width: "30%",
+            lineHeight: "2.2rem",
+            padding: 0,
+            margin: 0,
+          }}
+        >
+          {subTitle}
+        </p>
+        <p
+          className="pTextSmall"
+          style={{
+            color: "white",
+            textAlign: reversed ? "right" : "left",
+            width: "30%",
+            lineHeight: "2.2rem",
+            padding: 0,
+            margin: 0,
+            fontWeight: "normal",
+          }}
+        >
+          {desc}
+        </p>
+      </div>
       <img
         // width={"100%"}
 
@@ -26,8 +131,8 @@ const Card = ({ title, subTitle, desc, imgUrl, reversed }) => {
           width: "100%",
           // height: "100%",
           // width: "100%",
-          // position: "absolute",
-          // zIndex: "-25",
+          position: "absolute",
+          zIndex: "-25",
         }}
         src={imgUrl.src}
         alt=""
@@ -210,6 +315,7 @@ const MHome = () => {
         // }}
       >
         <Card
+          // animRef={useRef(null)}
           title={"OUR MISSION"}
           subTitle={"Is To Unlock Hidden Potential"}
           desc={
