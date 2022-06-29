@@ -1,83 +1,23 @@
-import { edited_aim_bg, how_bg } from "../../assets";
-import { Navbar2 as Navbar } from "..";
+import { edited_aim_bg, how_bg, JEE, results_1 } from "../../assets";
+import { Navbar2 as Navbar, Footer, Heading1 } from "..";
 
 import styles from "../../../styles/MHome.module.css";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
 
-const delayTime = 6;
-const dur = 2;
+const delayTime = 4;
+const dur = 1.5;
 
 const Card = ({ title, subTitle, desc, imgUrl, reversed, animRef }) => {
-  // // const delayTime = 1;
-  // // const dur = 2;
-  // const dur2 = 0.5; // + dur;
-  // let shouldPlayCount = 1;
-  // let anim;
-  // function repeatAnim() {
-  //   console.log("in r");
-  //   console.log(shouldPlayCount);
-
-  //   gsap
-  //     .fromTo(
-  //       animRef.current,
-  //       // marginTop: `-100%`,
-  //       { opacity: 0 },
-  //       {
-  //         opacity: 1,
-  //         duration: dur2,
-
-  //         onComplete: repeatAnim,
-  //       }
-  //     )
-  //     .delay(dur + delayTime - dur2);
-  //   // .delay(delayTime);
-  // }
-
-  // useEffect(() => {
-  //   shouldPlayCount += 1;
-  //   if (animRef != null && shouldPlayCount == 3) {
-  //     console.log("here");
-  //     gsap.fromTo(
-  //       animRef.current,
-  //       { opacity: 0 },
-  //       {
-  //         opacity: 1,
-  //         duration: dur2,
-
-  //         onComplete: repeatAnim,
-  //       }
-  //     );
-  //     // .delay(delayTime);
-  //   }
-  //   console.log("here");
-  //   // shouldPlayCount == 2;
-  //   // if (shouldPlayCount == 2) {
-  //   //   anim = gsap
-  //   //     .to(animRef.current, {
-  //   //       opacity: 0,
-  //   //       scale: 2,
-  //   //       // y: "100px",
-  //   //       // marginTop: `-100%`,
-  //   //       // top: "0",
-  //   //       duration: dur,
-  //   //       onComplete: repeatAnim,
-  //   //     })
-  //   //     .delay(delayTime);
-  //   // }
-  // }, []);
   return (
     <div
       style={{
         display: "flex",
-
         width: "100vw",
       }}
     >
       <div
         ref={animRef}
-        // ref={animRef}
-        // id="thisOne"
         className="dropShadow"
         style={{
           color: "white",
@@ -162,21 +102,19 @@ const MHome = () => {
   let marginLeftVal = 100;
   let marginLeftConst = marginLeftVal;
 
-  // const dur = 0.5;
   let counter = 1;
   let anim;
   let shouldPlayCount = 0;
   let numOfImages = 1;
   function repeatAnim() {
+    // console.log(document.querySelector("#toAnimateHome").style["margin-left"]);
     gsap.fromTo(
       [animRef1.current, animRef2.current, animRef3.current],
-      // marginTop: `-100%`,
+
       { opacity: 0 },
       {
         opacity: 1,
         duration: "0.5",
-
-        // onComplete: repeatAnim,
       }
     );
 
@@ -190,8 +128,8 @@ const MHome = () => {
       counter = 0;
     }
     marginLeftVal += marginLeftConst;
-    console.log(marginLeftVal);
-    console.log(++counter);
+    // console.log(marginLeftVal);
+    // console.log(++counter);
     gsap
       .to("#toAnimateHome", {
         marginLeft: `-${marginLeftVal}%`,
@@ -199,14 +137,12 @@ const MHome = () => {
         onStart: () => {
           gsap.fromTo(
             [animRef1.current, animRef2.current, animRef3.current],
-            // marginTop: `-100%`,
+
             { opacity: 1 },
             {
               opacity: 0,
               duration: "0",
-              stagger: "0.1",
-
-              // onComplete: repeatAnim,
+              stagger: "0.5",
             }
           );
         },
@@ -219,14 +155,12 @@ const MHome = () => {
     if (shouldPlayCount == 2) {
       gsap.fromTo(
         [animRef1.current, animRef2.current, animRef3.current],
-        // marginTop: `-100%`,
+
         { opacity: 0 },
         {
           opacity: 1,
           duration: "0.5",
-          stagger: "0.1",
-
-          // onComplete: repeatAnim,
+          // stagger: "0.1",
         }
       );
 
@@ -238,64 +172,146 @@ const MHome = () => {
           onStart: () => {
             gsap.fromTo(
               [animRef1.current, animRef2.current, animRef3.current],
-              // marginTop: `-100%`,
+
               { opacity: 1 },
               {
                 opacity: 0,
                 duration: "0",
-
-                // onComplete: repeatAnim,
               }
             );
           },
         })
         .delay(delayTime);
-      // .pause();
     }
   }, []);
   return (
     <div>
       <Navbar whichActive={"none"} />
       <div
-        ref={titleRef}
-        id="toAnimateHome"
+        className=""
         style={{
-          display: "flex",
-          flexDirection: "row",
-          width: "max-content",
+          width: "100vw",
           height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-start",
+          alignItems: "flex-start",
         }}
       >
-        <Card
-          animRef={animRef1}
-          title={"OUR MISSION"}
-          subTitle={"Is To Unlock Hidden Potential"}
-          desc={
-            "We believe that every student has hidden potential. We strive to unlock this potential."
-          }
-          imgUrl={edited_aim_bg}
-        />
-        <Card
-          animRef={animRef2}
-          title={"BETTER EDUCATION "}
-          subTitle={"For Better Future "}
-          desc={
-            "We give high quality education so that the future of your child is bright and secure."
-          }
-          reversed
-          imgUrl={how_bg}
-        />
+        <div
+          ref={titleRef}
+          id="toAnimateHome"
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            width: "max-content",
+            height: "100%",
+            zIndex: 1,
+          }}
+        >
+          <Card
+            animRef={animRef1}
+            title={"OUR MISSION"}
+            subTitle={"Is To Unlock Hidden Potential"}
+            desc={
+              "We believe that every student has hidden potential. We strive to unlock this potential."
+            }
+            imgUrl={edited_aim_bg}
+          />
+          <Card
+            animRef={animRef2}
+            title={"BETTER EDUCATION "}
+            subTitle={"For Better Future "}
+            desc={
+              "We give high quality education so that the future of your child is bright and secure."
+            }
+            reversed
+            imgUrl={how_bg}
+          />
 
-        <Card
-          animRef={animRef3}
-          title={"OUR MISSION"}
-          subTitle={"Is To Unlock Hidden Potential"}
-          desc={
-            "We believe that every student has hidden potential. We strive to unlock this potential."
-          }
-          imgUrl={edited_aim_bg}
-        />
+          <Card
+            animRef={animRef3}
+            title={"OUR MISSION"}
+            subTitle={"Is To Unlock Hidden Potential"}
+            desc={
+              "We believe that every student has hidden potential. We strive to unlock this potential."
+            }
+            imgUrl={edited_aim_bg}
+          />
+        </div>
+        <div className="flexCenter offWhiteBg">
+          <div
+            className="mainContainer "
+            style={{
+              // width: "100%",
+              // height: "100vh",
+              marginTop: "100vh",
+              // background: "black",
+            }}
+          >
+            <Heading1 title={"Highlights"} />
+            <div
+              className="flexCenter roundCorner dropShadow"
+              style={{
+                overflow: "hidden",
+                marginBottom: "3rem",
+                justifyContent: "flex-start",
+                alignItems: "flex-start",
+              }}
+              // style={{ width: "100%", display: "flex", flexDirection: "row", }}
+            >
+              <div
+                // ref={titleRef}
+                id="toAnimateHomeHighlights"
+                className={styles.highlights_container}
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  width: "max-content",
+                  // height: "100%",
+                  height: "calc(100vh - 200px)",
+                  zIndex: 1,
+                }}
+              >
+                <img src={results_1.src} />
+                <img src={JEE.src} />
+                <img src={results_1.src} />
+
+                {/* <img src={JEE.src} /> */}
+                {/* <img src={JEE.src} /> */}
+                {/* <img src={JEE.src} /> */}
+              </div>
+              {/* <div
+                style={{
+                  width: "50%",
+                  // overflow: "hidden",
+                  display: "flex",
+                }}
+              ></div>
+              <div style={{ width: "50%", background: "white" }}>tes</div> */}
+            </div>
+          </div>
+          <Footer />
+        </div>
       </div>
+      {/* <div className="flexCenter">
+        <div
+          className="mainContainer flexCenter"
+          style={{
+            marginTop: "100vh",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div style={{ display: "flex" }}>
+            <div
+              style={{ width: "100%", height: "100vh", background: "black" }}
+            >
+              hbgyg
+            </div>
+          </div>
+        </div>
+      </div> */}
     </div>
   );
 };

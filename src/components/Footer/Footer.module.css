@@ -2,6 +2,13 @@
     margin-top: 3px;
 }
 
+.footer__link:hover {
+    color: var(--primaryColor);
+    text-decoration: underline;
+}
+
+
+
 .pText {
 
     margin: 0;

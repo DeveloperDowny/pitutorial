@@ -69,14 +69,21 @@ const Footer = () => {
           }}
         >
           <p className={styles.pText}>Contact Us</p>
-          <a href="/contact-us">Virar Branch</a>
-          <a href="/contact-us">Vasai Branch</a>
+          <a className={styles.footer__link} href="/contact-us">
+            Virar Branch
+          </a>
+          <a className={styles.footer__link} href="/contact-us">
+            Vasai Branch
+          </a>
           <a
+            className={styles.footer__link}
             href={`mailto:vedantpanchal12345@gmail.com?subject=Inquiry for Pi TUTORIAL`}
           >
             {" Mail us at emailAdd@gmail.com"}
           </a>
-          <a href="tel:+918975803664">Call us at +91 782 1865 157</a>
+          <a className={styles.footer__link} href="tel:+918975803664">
+            Call us at +91 782 1865 157
+          </a>
         </div>
       </div>
 
@@ -113,7 +120,11 @@ const Footer = () => {
         />
         <p style={{ margin: "0 3rem", width: "100%" }}>
           Websie built by{" "}
-          <a href="https://www.linkedin.com/in/vedantpanchal/" target="_blank">
+          <a
+            className={styles.footer__link}
+            href="https://www.linkedin.com/in/vedantpanchal/"
+            target="_blank"
+          >
             <u>Vedant Panchal</u>
           </a>
         </p>

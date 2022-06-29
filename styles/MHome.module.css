@@ -40,3 +40,11 @@
     font-weight: normal;
     color: var(--blackAlternate)
 }
+
+.highlights_container img {
+    margin: 0;
+    /* height: calc(100vh - 200px); */
+    width: 865px;
+    object-fit: cover;
+
+}
