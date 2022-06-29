@@ -1,4 +1,11 @@
-import { edited_aim_bg, how_bg, JEE, results_1 } from "../../assets";
+import {
+  edited_aim_bg,
+  how_bg,
+  how_we_teach,
+  JEE,
+  results_1,
+} from "../../assets";
+
 import { Navbar2 as Navbar, Footer, Heading1 } from "..";
 
 import styles from "../../../styles/MHome.module.css";
@@ -128,6 +135,7 @@ const MHome = () => {
       counter = 0;
     }
     marginLeftVal += marginLeftConst;
+    ++counter;
     // console.log(marginLeftVal);
     // console.log(++counter);
     gsap
@@ -274,7 +282,7 @@ const MHome = () => {
                 }}
               >
                 <img src={results_1.src} />
-                <img src={JEE.src} />
+                <img src={how_we_teach.src} />
                 <img src={results_1.src} />
 
                 {/* <img src={JEE.src} /> */}

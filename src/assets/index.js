@@ -27,6 +27,7 @@ import pit_logo_bl from "./images/pit_logo_bl.png";
 import edited_aim_bg from "./res/test_223.png";
 import how_bg from "./res/how_bg.png";
 import results_1 from "./res/results_1.png";
+import how_we_teach from "./res/how_we_teach_hl.png";
 
 export {
   pit_logo,
@@ -57,4 +58,5 @@ export {
   edited_aim_bg,
   how_bg,
   results_1,
+  how_we_teach,
 };
