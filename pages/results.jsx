@@ -1,6 +1,16 @@
 import { Footer, Heading1, Navbar2 as Navbar } from "../src/components";
 
-import { JEE, NEET, result_f } from "../src/assets";
+import {
+  JEE,
+  NEET,
+  r1,
+  r2,
+  r3,
+  result_f,
+  r4,
+  vp_result,
+  confetti_bg,
+} from "../src/assets";
 import styles from "../styles/results.module.css";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
@@ -15,7 +25,7 @@ const ResImgFinal = ({ resImg }) => {
         justifyContent: "center",
       }}
     >
-      <img
+      {/* <img
         style={{
           objectFit: "contain",
           position: "absolute",
@@ -24,8 +34,36 @@ const ResImgFinal = ({ resImg }) => {
         height={"100%"}
         src={resImg.src}
         alt=""
-      />
+      /> */}
+
       <img
+        style={{
+          objectFit: "contain",
+          position: "absolute",
+          zIndex: 1,
+          paddingTop: "2.5rem",
+        }}
+        height={"100%"}
+        src={resImg.src}
+        alt=""
+      />
+
+      <img
+        // className={styles.bgImg}
+        height="100%"
+        // width="865px"
+
+        src={confetti_bg.src}
+        alt=""
+        style={{
+          objectFit: "cover",
+          position: "absolute",
+          position: "top",
+          zIndex: -11,
+          // filter: "blur(5px)",
+        }}
+      />
+      {/* <img
         className={styles.bgImg}
         width="865px"
         src={resImg.src}
@@ -37,7 +75,7 @@ const ResImgFinal = ({ resImg }) => {
           zIndex: -11,
           filter: "blur(5px)",
         }}
-      />
+      /> */}
     </div>
   );
 };
@@ -253,12 +291,13 @@ const Results = () => {
                 }}
               >
                 {/* noOfImages = effective images-1 */}
-                <ResImgFinal resImg={JEE} />
-                <ResImgFinal resImg={NEET} />
-                <ResImgFinal resImg={NEET} />
-                <ResImgFinal resImg={NEET} />
+                <ResImgFinal resImg={r4} />
+                <ResImgFinal resImg={vp_result} />
+                <ResImgFinal resImg={r2} />
+                <ResImgFinal resImg={r3} />
+                <ResImgFinal resImg={r4} />
                 {/* above is effective images. Below image should be same as the first one */}
-                <ResImgFinal resImg={JEE} />
+                <ResImgFinal resImg={r4} />
               </div>
             </div>
           </div>

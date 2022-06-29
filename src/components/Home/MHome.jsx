@@ -2,8 +2,9 @@ import {
   edited_aim_bg,
   how_bg,
   how_we_teach,
-  JEE,
+  courses,
   results_1,
+  our_services,
 } from "../../assets";
 
 import { Navbar2 as Navbar, Footer, Heading1 } from "..";
@@ -102,6 +103,54 @@ const Card = ({ title, subTitle, desc, imgUrl, reversed, animRef }) => {
 };
 
 const MHome = () => {
+  function animateThis(noOfImg, id) {
+    const delayTime = 2;
+    const dur = 0.5;
+    let marginLeftVal = 100;
+    let marginLeftConst = marginLeftVal;
+    let counter = 1;
+    let anim;
+    let shouldPlayCount = 0;
+    let numOfImages = noOfImg - 1;
+    function repeatAnimG() {
+      // console.log(document.querySelector("#toAnimateHome").style["margin-left"]);
+      if (counter > numOfImages) {
+        if (document.querySelector(id) == null) {
+          return;
+        }
+        document.querySelector(id).style["margin-left"] = "0px";
+
+        marginLeftVal = 0;
+        counter = 0;
+      }
+      marginLeftVal += marginLeftConst;
+      ++counter;
+      // console.log(marginLeftVal);
+      // console.log(++counter);
+      gsap
+        .to(id, {
+          marginLeft: `-${marginLeftVal}%`,
+          duration: dur,
+          onComplete: repeatAnimG,
+        })
+        .delay(delayTime);
+    }
+    useEffect(() => {
+      shouldPlayCount += 1;
+      if (shouldPlayCount == 2) {
+        anim = gsap
+          .to(id, {
+            marginLeft: `-${marginLeftVal}%`,
+            duration: dur,
+            onComplete: repeatAnimG,
+          })
+          .delay(delayTime);
+      }
+    }, []);
+  }
+
+  animateThis(3, "#toAnimateHomeHighlights");
+
   const titleRef = useRef(null);
   const animRef1 = useRef(null);
   const animRef2 = useRef(null);
@@ -258,6 +307,11 @@ const MHome = () => {
             }}
           >
             <Heading1 title={"Highlights"} />
+            <img
+              style={{ objectFit: "contain", height: "50vh" }}
+              // height={"0%"}
+              src={our_services.src}
+            />
             <div
               className="flexCenter roundCorner dropShadow"
               style={{
@@ -282,6 +336,7 @@ const MHome = () => {
                 }}
               >
                 <img src={results_1.src} />
+                <img src={courses.src} />
                 <img src={how_we_teach.src} />
                 <img src={results_1.src} />
 
