@@ -19,10 +19,19 @@
     margin: 0.5rem;
     width: 16rem;
     height: 12rem;
+    transition: all 0.5s ease;
     /* min-height: 12rem; */
 }
 
 .courseCard__container {
     height: 100%;
     align-items: center;
+}
+
+.courseCard:hover{
+    /* transform: translateY(-30px); */
+    /* transform: translateY(-30px); */
+    /* transform: rotate(30deg); */
+    transform: translate(0,-.5rem);
+    cursor: default;
 }

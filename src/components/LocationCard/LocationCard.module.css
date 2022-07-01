@@ -33,3 +33,9 @@
 .map_container {
     border-radius: 40px;
 }
+
+.courseCard  a:hover
+    {
+            text-decoration: underline;
+            color: var(--primaryColor);
+        }

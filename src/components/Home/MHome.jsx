@@ -15,6 +15,24 @@ import { useRef, useEffect } from "react";
 
 const delayTime = 4;
 const dur = 1.5;
+let anim1;
+let anim2;
+let anim3;
+let anim4;
+let anim5;
+let anim6;
+let anim7;
+let anim8;
+
+//  useEffect(() => {
+//    const handleWindowClick = () => setAlert(false);
+//    if (alert) {
+//      window.addEventListener("click", handleWindowClick);
+//    } else {
+//      window.removeEventListener("click", handleWindowClick);
+//    }
+//    return () => window.removeEventListener("click", handleWindowClick);
+//  }, []);
 
 const Card = ({ title, subTitle, desc, imgUrl, reversed, animRef }) => {
   return (
@@ -127,7 +145,7 @@ const MHome = () => {
       ++counter;
       // console.log(marginLeftVal);
       // console.log(++counter);
-      gsap
+      anim1 = gsap
         .to(id, {
           marginLeft: `-${marginLeftVal}%`,
           duration: dur,
@@ -138,7 +156,7 @@ const MHome = () => {
     useEffect(() => {
       shouldPlayCount += 1;
       if (shouldPlayCount == 2) {
-        anim = gsap
+        anim2 = gsap
           .to(id, {
             marginLeft: `-${marginLeftVal}%`,
             duration: dur,
@@ -146,6 +164,19 @@ const MHome = () => {
           })
           .delay(delayTime);
       }
+      return () => {
+        // if (anim1 != null) {
+        //   console.log("in return");
+        //   anim1.kill();
+        //   anim2.kill();
+        //   // anim3.kill();
+        //   // anim4.kill();
+        //   // anim5.kill();
+        //   // anim6.kill();
+        //   // anim7.kill();
+        //   // anim8.kill();
+        // }
+      };
     }, []);
   }
 
@@ -159,12 +190,14 @@ const MHome = () => {
   let marginLeftConst = marginLeftVal;
 
   let counter = 1;
-  let anim;
   let shouldPlayCount = 0;
   let numOfImages = 1;
   function repeatAnim() {
     // console.log(document.querySelector("#toAnimateHome").style["margin-left"]);
-    gsap.fromTo(
+    // if (gsap) {
+    //   return;
+    // }
+    anim3 = gsap.fromTo(
       [animRef1.current, animRef2.current, animRef3.current],
 
       { opacity: 0 },
@@ -187,12 +220,15 @@ const MHome = () => {
     ++counter;
     // console.log(marginLeftVal);
     // console.log(++counter);
-    gsap
+    anim4 = gsap
       .to("#toAnimateHome", {
         marginLeft: `-${marginLeftVal}%`,
         duration: dur,
         onStart: () => {
-          gsap.fromTo(
+          // if (gsap) {
+          //   return;
+          // }
+          anim5 = gsap.fromTo(
             [animRef1.current, animRef2.current, animRef3.current],
 
             { opacity: 1 },
@@ -210,7 +246,7 @@ const MHome = () => {
   useEffect(() => {
     shouldPlayCount += 1;
     if (shouldPlayCount == 2) {
-      gsap.fromTo(
+      anim6 = gsap.fromTo(
         [animRef1.current, animRef2.current, animRef3.current],
 
         { opacity: 0 },
@@ -221,13 +257,16 @@ const MHome = () => {
         }
       );
 
-      anim = gsap
+      anim7 = gsap
         .to("#toAnimateHome", {
           marginLeft: `-${marginLeftVal}%`,
           duration: dur,
           onComplete: repeatAnim,
           onStart: () => {
-            gsap.fromTo(
+            // if (gsap) {
+            //   return;
+            // }
+            anim8 = gsap.fromTo(
               [animRef1.current, animRef2.current, animRef3.current],
 
               { opacity: 1 },
@@ -239,6 +278,36 @@ const MHome = () => {
           },
         })
         .delay(delayTime);
+
+      return () => {
+        const animArr = [
+          anim1,
+          anim2,
+          anim3,
+          anim4,
+          anim5,
+          anim6,
+          anim7,
+          anim8,
+        ];
+
+        for (const i of animArr) {
+          if (i != null) {
+            i.kill();
+          }
+        }
+
+        // if (anim3 != null) {
+        //   console.log("in return 2");
+
+        //   anim3.kill();
+        //   anim4.kill();
+        //   anim5.kill();
+        //   anim6.kill();
+        //   anim7.kill();
+        //   anim8.kill();
+        // }
+      };
     }
   }, []);
   return (
@@ -307,11 +376,11 @@ const MHome = () => {
             }}
           >
             <Heading1 title={"Highlights"} />
-            <img
+            {/* <img
               style={{ objectFit: "contain", height: "50vh" }}
               // height={"0%"}
               src={our_services.src}
-            />
+            /> */}
             <div
               className="flexCenter roundCorner dropShadow"
               style={{

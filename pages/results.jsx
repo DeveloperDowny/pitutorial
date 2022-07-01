@@ -15,6 +15,8 @@ import styles from "../styles/results.module.css";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
 
+const animArr = [];
+
 const ResImgFinal = ({ resImg }) => {
   return (
     <div
@@ -131,7 +133,7 @@ const Results = () => {
     marginLeftVal += marginLeftConst;
     console.log(marginLeftVal);
     console.log(++counter);
-    gsap
+    const anim1 = gsap
       .to("#toAnimate", {
         marginLeft: `-${marginLeftVal}%`,
         duration: dur,
@@ -140,12 +142,14 @@ const Results = () => {
         // delay: 5,
       })
       .delay(delayTime);
+
+    animArr.push(anim1);
   }
   useEffect(() => {
     // console.log("in use effect");
     shouldPlayCount += 1;
     if (shouldPlayCount == 2) {
-      anim = gsap
+      const anim2 = gsap
         .to("#toAnimate", {
           marginLeft: `-${marginLeftVal}%`,
           duration: dur,
@@ -157,8 +161,17 @@ const Results = () => {
           // delay: 5,
         })
         .delay(delayTime);
+      animArr.push(anim2);
       // .delay(delayTime);
     }
+
+    return () => {
+      for (const i of animArr) {
+        if (i != null) {
+          i.kill();
+        }
+      }
+    };
 
     // anim.repeat(5);
   }, []);

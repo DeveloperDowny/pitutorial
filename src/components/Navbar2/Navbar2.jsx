@@ -1,8 +1,13 @@
 import Link from "next/link";
 import styles from "./Navbar2.module.css";
 import { pit_logo, badge } from "../../assets";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdOutlineRestaurantMenu } from "react-icons/md";
+import { useState } from "react";
 
 const Navbar = ({ whichActive }) => {
+  const [toggleMenu, setToggleMenu] = useState(false);
+
   return (
     <div
       className={`${styles.dropShadow}`}
@@ -83,6 +88,9 @@ const Navbar = ({ whichActive }) => {
             </a>
           </Link>
         </div>
+      </div>
+      <div>
+        <GiHamburgerMenu />
       </div>
       <div>
         <a href="tel:+8975803664">
