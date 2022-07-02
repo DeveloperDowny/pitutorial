@@ -69,7 +69,8 @@ const Card = ({ title, subTitle, desc, imgUrl, reversed, animRef }) => {
             textAlign: reversed ? "right" : "left",
             padding: 0,
             margin: 0,
-            paddingTop: "97px",
+            paddingTop: "8.5vh",
+            // paddingTop: "97px",
             fontFamily: "Open sans",
             fontWeight: 600,
           }}
@@ -394,7 +395,7 @@ const MHome = () => {
               <div
                 // ref={titleRef}
                 id="toAnimateHomeHighlights"
-                className={styles.highlights_container}
+                className={`${styles.highlights_container} `}
                 style={{
                   display: "flex",
                   flexDirection: "row",

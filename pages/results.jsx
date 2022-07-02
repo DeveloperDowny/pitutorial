@@ -20,9 +20,9 @@ const animArr = [];
 const ResImgFinal = ({ resImg }) => {
   return (
     <div
-      className="final"
+      className="final ResImgFinal"
       style={{
-        width: "865px",
+        // width: "865px",
         display: "flex",
         justifyContent: "center",
       }}
@@ -46,6 +46,7 @@ const ResImgFinal = ({ resImg }) => {
           paddingTop: "2.5rem",
         }}
         height={"100%"}
+        width={"100%"}
         src={resImg.src}
         alt=""
       />
@@ -86,18 +87,17 @@ const Card = ({ title }) => {
   return (
     <div className={`roundCorner dropShadow ${styles.courseCard}`}>
       <div
-        className={`flexCenter ${styles.courseCard__container}`}
-        style={{
-          height: "100%",
-          padding: "0.5rem 2rem",
-        }}
+        className={`flexCenter ${styles.courseCard__container} results__cardContainer`}
+        // style={{
+        //   height: "100%",
+        // }}
       >
         <p
           className="pTextSmall"
-          style={{
-            fontSize: "1rem",
-            width: "140px",
-          }}
+          // style={{
+          //   // fontSize: "1rem",
+          //   // width: "140px",
+          // }}
         >
           {title}
         </p>
@@ -202,7 +202,7 @@ const Results = () => {
               style={{
                 zIndex: "11",
                 height: "100%",
-                paddingLeft: "1rem",
+                paddingLeft: "1rem", //check what happens
                 position: "absolute",
                 top: "0px",
                 alignItems: "flex-start",
@@ -253,7 +253,11 @@ const Results = () => {
 
           <div
             className="flexCenter animated_results__container"
-            style={{ width: "865px", height: "100%", zIndex: "11" }}
+            style={{
+              // width: "865px",
+              height: "100%",
+              zIndex: "11",
+            }}
           >
             <div
               style={{
@@ -268,9 +272,9 @@ const Results = () => {
               <Card title="Top Rankers" />
             </div>
             <div
-              className="flexCenter roundCorner dropShadow"
+              className="flexCenter roundCorner dropShadow results__toAnimateContainer"
               style={{
-                width: "865px",
+                // width: "865px",
                 zIndex: "11",
                 background: "white",
                 marginBottom: "3rem",

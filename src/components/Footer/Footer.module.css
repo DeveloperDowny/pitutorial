@@ -18,3 +18,12 @@
     font-weight: 600;
     color: var(--blackAlternate)
 }
+@media screen and (max-width: 897px) {
+    .pText {
+        font-size: 12pt;
+    }
+
+    .footer__link {
+        font-size: 9pt;
+    }
+}

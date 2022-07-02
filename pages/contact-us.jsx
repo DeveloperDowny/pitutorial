@@ -18,7 +18,10 @@ const ContactUs = () => {
           <div>
             <Heading1 title={"Locations"} />
           </div>
-          <div className="flexCenter" style={{ flexDirection: "row" }}>
+          <div
+            className="flexCenter"
+            style={{ flexDirection: "row", flexWrap: "wrap" }}
+          >
             <LocationCard mimg={JEE} title="Virar" />
             <LocationCard mimg={JEE} title="Vasai" />
           </div>

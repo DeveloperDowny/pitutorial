@@ -22,9 +22,9 @@ const LocationCard = ({ mimg, title, desc }) => {
               borderStyle: "none",
             }}
             // style={{ border: 0, width: "100%" }}
-            allowfullscreen="false"
+            // allowfullscreen="false"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            // referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
 

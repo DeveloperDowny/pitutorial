@@ -17,30 +17,32 @@ const Heading1 = ({ title, reversed }) => {
           {title}
         </h1>
         <div
+          className="h1heading__displaced_pen_div"
           style={
             reversed == null
               ? {
                   display: "flex",
                   justifyContent: "flex-end",
                   // marginBottom: "-2px",
-                  // marginBottom: "-2px",
+                  marginBottom: "10px",
                   // marginRight: "-24px",
-                  marginRight: "-40px",
+                  // marginRight: "-40px",
                 }
               : {
                   display: "flex",
                   justifyContent: "flex-start",
-                  marginBottom: "-2px",
+                  // marginBottom: "-2px", //real one
+                  marginBottom: "10px",
                   // marginLeft: "-24px",
                   marginLeft: "-40px",
                 }
           }
         >
           <img
-            className={`${reversed ? "mirror" : ""}`}
+            className={`${reversed ? "mirror" : ""} h1heading__pen_img`}
             src={pen_fff.src}
             // style={{ height: "20px" }}
-            style={{ height: "30px" }}
+            // style={{ height: "30px" }}
           />
         </div>
 

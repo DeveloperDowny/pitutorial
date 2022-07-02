@@ -93,6 +93,7 @@ import r4 from "./res/results/4.png";
 import vp_result from "./res/results/vp_result.png";
 import confetti_bg from "./res/results/confetti_bg.jpg";
 import our_services from "./res/our_services.png";
+import phone_call from "./res/phone_call.png";
 
 export {
   our_services,
@@ -125,4 +126,5 @@ export {
   r3,
   r4,
   vp_result,
+  phone_call,
 };

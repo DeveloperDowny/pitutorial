@@ -23,7 +23,7 @@ const InputField = ({
         id="temp"
         style={{
           zIndex: "9",
-          textAlign: "center",
+          // textAlign: "center",
           position: "absolute",
           top: "1.4rem",
           left: "2.5rem",

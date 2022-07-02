@@ -4,7 +4,10 @@ import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div className="flexCenter" style={{ width: "100%", background: "white" }}>
+    <div
+      className="flexCenter"
+      style={{ width: "100%", background: "white", padding: "0 1rem" }}
+    >
       <div
         className="footer__container flexCenter"
         style={{
@@ -88,15 +91,16 @@ const Footer = () => {
       </div>
 
       <div
+        className="divider"
         style={{
-          width: "80%",
-          background: "black", //alternate black
+          // width: "80%",
+          // background: "black", //alternate black
           height: "2px",
           margin: "1rem",
         }}
       ></div>
       <div
-        className="flexCenter"
+        className="flexCenter footer__textContainer"
         style={{
           flexDirection: "row",
           // justifyContent: "flex-end",
@@ -105,7 +109,12 @@ const Footer = () => {
           marginBottom: "1rem",
         }}
       >
-        <p style={{ margin: "0 3rem", width: "100%" }}>
+        <p
+          style={{
+            // margin: "0 3rem",
+            width: "100%",
+          }}
+        >
           © Copyright 2022, Pi TUTORIAL. All rights reserved.
         </p>
         <img
@@ -118,7 +127,12 @@ const Footer = () => {
             // filter: "grayscale(1)",
           }}
         />
-        <p style={{ margin: "0 3rem", width: "100%" }}>
+        <p
+          style={{
+            //  margin: "0 3rem",
+            width: "100%",
+          }}
+        >
           Websie built by{" "}
           <a
             className={styles.footer__link}

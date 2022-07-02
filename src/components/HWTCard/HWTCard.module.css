@@ -47,3 +47,29 @@
     transform: translate(0, -.5rem);
     cursor: default;
 }
+
+@media screen and (max-width: 897px) {
+
+    .courseCard {
+        width: calc(12rem*0.8);
+        height: calc(12rem*0.8);
+
+    }
+
+    .courseCard img {
+        width: 60px;
+        height: 60px;
+        /* width: 100%; */
+        /* height: 100%; */
+    }
+
+    /* .pText {
+        font-size: 2pt;
+    } */
+
+    .pTextSmall {
+        font-size: 20px;
+    }
+
+
+}

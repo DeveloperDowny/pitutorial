@@ -13,15 +13,18 @@
     font-family: 'Open Sans',
     sans-serif;
     font-weight: 600;
+
+    
 }
 
-.navbar__links_container {
+/* .navbar__links_container {
     align-items: center;
+    margin-right: 5rem;
 }
 
 .navbar__links_container a {
     margin: 0.8rem;
-}
+} */
 .test {
     /* display: inline-block; */
     position: relative;
