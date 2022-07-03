@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
 
 :root {
   --dropShadow: drop-shadow(0 7px 12px rgba(0, 0, 0, 0.25));
   --dropShadowLight: drop-shadow(0 7px 12px rgba(0, 0, 0, 0.15));
-  --primaryColor: #D60000;
-  ---offWhite: #F6F6F6;
+  --primaryColor: #d60000;
+  ---offWhite: #f6f6f6;
   --blackAlternate: #333;
-  --smallBorderRadius: .75rem;
+  --smallBorderRadius: 0.75rem;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -42,7 +42,7 @@ a {
 
 .h1Text {
   font-size: 30pt;
-  font-family: 'Source Serif Pro', serif;
+  font-family: "Source Serif Pro", serif;
   font-weight: 300;
   color: var(--blackAlternate);
 }
@@ -51,27 +51,27 @@ a {
   margin: 0;
   text-align: center;
   font-size: 30pt;
-  font-family: 'Open sans', serif;
+  font-family: "Open sans", serif;
   font-weight: 600;
-  color: var(--blackAlternate)
+  color: var(--blackAlternate);
 }
 
 .form__pText {
   margin: 0;
   text-align: center;
   font-size: 1rem;
-  font-family: 'Open sans', serif;
+  font-family: "Open sans", serif;
   font-weight: 600;
-  color: var(--blackAlternate)
+  color: var(--blackAlternate);
 }
 
 .pTextSmall {
   margin: 0;
   text-align: center;
   font-size: 16pt;
-  font-family: 'Open sans', serif;
+  font-family: "Open sans", serif;
   font-weight: 600;
-  color: var(--blackAlternate)
+  color: var(--blackAlternate);
 }
 
 .offWhiteBg {
@@ -122,8 +122,9 @@ a {
   background: var(--blackAlternate);
 }
 
-input, textarea {
-  font-family: 'Open sans', serif;
+input,
+textarea {
+  font-family: "Open sans", serif;
   font-size: 1rem;
   padding: 1rem;
   margin: 1.5rem;
@@ -137,13 +138,14 @@ input, textarea {
   /* transition: 2s; */
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   /* background: rgba(225, 115, 255, 0.5); */
 
   /* border: 0; */
   /* /* outline: 3px solid #BFDEFF; */
   /* border: 4px solid #80BDFF; */
-  outline: 3px solid #80BDFF;
+  outline: 3px solid #80bdff;
   /* outline-offset: 3px; */
 }
 
@@ -155,12 +157,11 @@ button {
   color: white;
   border-radius: 8px;
   text-transform: uppercase;
-  font-family: 'Open sans', serif;
+  font-family: "Open sans", serif;
   font-weight: bold;
   filter: var(--dropShadow);
   font-size: 1rem;
   transition: filter 0.25s;
-
 }
 
 button:hover {
@@ -171,7 +172,6 @@ button:hover {
 
 .formContainer {
   width: 630px;
-
 }
 .navbar__smallScreen__freeDemoClass {
   background: var(--primaryColor);
@@ -206,11 +206,11 @@ button:hover {
 }
 
 .navbar__links_superContainer {
-            display: flex;
-                align-items: center;
-                width: 100%;
-                justify-content: flex-end;
-                color: #D60000;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  color: #d60000;
 }
 
 .navbar__menuContainer {
@@ -223,7 +223,6 @@ button:hover {
   /* display: none; */
   color: var(--primaryColor);
   font-size: 27;
-
 }
 
 .divider {
@@ -231,17 +230,15 @@ button:hover {
   background: var(--blackAlternate);
 }
 
-.footer__textContainer p  {
+.footer__textContainer p {
   margin: 0 3rem;
-
 }
-
 
 .app__navbar-smallscreen_overlay {
   position: fixed;
-    display: flex;
-      justify-content: center;
-      align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -256,10 +253,9 @@ button:hover {
 
 .app__navbar-smallscreen_overlay .overlay__close {
   font-size: 27px;
-  color: var(--color-golden);
+  color: var(--blackAlternate);
   cursor: pointer;
   margin: 1rem;
-
 
   position: absolute;
   top: 20px;
@@ -284,21 +280,23 @@ button:hover {
 }
 
 .app__navbar-smallscreen_links li:hover {
-    color: var(--primaryColor);
+  color: var(--primaryColor);
 }
 
-.results__toAnimateContainer, .animated_results__container, .ResImgFinal{
+.results__toAnimateContainer,
+.animated_results__container,
+.ResImgFinal {
   width: 865px;
 }
 
 .results__cardContainer {
-        padding: 0.5rem 2rem;
+  padding: 0.5rem 2rem;
 }
 
-                .results__cardContainer p {
-                  width: 144px;
-                  font-size: 16px;
-                }
+.results__cardContainer p {
+  width: 144px;
+  font-size: 16px;
+}
 .navbar__container {
   height: 97px;
 }
@@ -323,6 +321,20 @@ button:hover {
   display: none;
 } */
 
+.navbar__smallScreen__freeDemoClass {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  padding: 1rem;
+}
+
+.navbar__smallScreen__freeDemoClass img {
+  height: 100%;
+  margin-right: 5px;
+}
+
 @media screen and (max-width: 1300px) {
   .navbar__badge {
     display: none;
@@ -330,23 +342,20 @@ button:hover {
 
   .navbar__links_container {
     margin-right: 1.5rem;
-
   }
 
-    .navbar__smallScreen__freeDemoClass {
-      display: flex;
-    }
+  .navbar__smallScreen__freeDemoClass {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 1073px) {
-
   .navbar__smallScreen__freeDemoClass {
     margin-right: 0;
   }
 
   .navbar__links_superContainer {
     display: none;
-
   }
   .navbar__menuContainer {
     display: flex;
@@ -354,34 +363,38 @@ button:hover {
     font-size: 2rem;
   }
 
-    .footer__textContainer p {
-      margin: 0;
-    }
+  .footer__textContainer p {
+    margin: 0;
+  }
 
-    .divider {
-      width: 90%;
-    }
+  .divider {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 897px) {
+  .navbar__links_container {
+    margin-right: 0;
+  }
+
   .h1heading__displaced_pen_div {
-      margin-right: -20px;
-    }
-  
+    margin-right: -20px;
+  }
 
   .h1heading__pen_img {
-    height: 15px;
+    height: 20px;
   }
   .mainContainer {
     width: 100vw;
     padding: 0 16px;
   }
 
-  .animated_results__container, .results__toAnimateContainer {
+  .animated_results__container,
+  .results__toAnimateContainer {
     /* width: 100vw; */
-        width: calc(100vw - 32px);
+    width: calc(100vw - 32px);
 
-        /* padding: 0 16px; */
+    /* padding: 0 16px; */
   }
 
   .ResImgFinal {
@@ -389,58 +402,101 @@ button:hover {
     width: calc(100vw - 32px);
   }
 
-    #toAnimateHomeHighlights img {
-      width: calc(100vw - 32px);
-      height: 100%;
-      object-fit: contain;
-    }
+  #toAnimateHomeHighlights img {
+    width: calc(100vw - 32px);
+    height: 100%;
+    object-fit: contain;
+  }
 
   .footer__textContainer {
     font-size: 9pt;
   }
 
-    .pText {
-      font-size: 20pt;
-    }
+  .pText {
+    font-size: 20pt;
+  }
 
-    .pTextSmall {
-      font-size: 18px;
-    }
+  .pTextSmall {
+    font-size: 18px;
+  }
 
-    .h1Text {
-      font-size: 28px;
-    }
+  .h1Text {
+    font-size: 28px;
+  }
 
-        .results__cardContainer {
-          padding: 0.5rem 0.5rem;
-          
-        }
+  .results__cardContainer {
+    padding: 0.5rem 0.5rem;
+  }
 
-        .results__cardContainer p {
-          width: 100px;
-          font-size: 12px;
-        }
-  
-                .navbar__container {
-                  height: calc(97px * 0.7);
-                }
+  .results__cardContainer p {
+    width: 100px;
+    font-size: 12px;
+  }
 
-      
+  .navbar__container {
+    height: calc(97px * 0.7);
+  }
+  .superContainer {
+    top: calc(97px * 0.7);
+  }
+  .navbar__menuContainer a {
+    font-size: 24px;
+  }
 
-    /* .results__toAnimateContainer {
+  .overlay__close {
+    width: 25px;
+    height: 25px;
+    /* font-size: 100px; */
+  }
+  .navbar__smallScreen__freeDemoClass img {
+    height: 20px;
+  }
+
+  /* .navbar__smallScreen__freeDemoClass {
+      font-size: 10px;
+    } */
+
+  .navbar__smallScreen__freeDemoClass p {
+    font-size: 14px;
+
+    /* padding: 50px 0; */
+  }
+
+  /* .results__toAnimateContainer {
       width: 100vw;
       padding: 0 16px;
     } */
 
   /* .animated_results__container */
+
+  /* .navbar__smallScreen__freeDemoClass {
+    display: none;
+  } */
 }
 
 /* @media screen and (max-width: 735px) {
 
 } */ /*temp*/
 
-
-
 /* .navbar__container {
 
 } */
+
+.navbar__links_container__smallscreen {
+  margin: 0;
+}
+
+@media screen and (max-width: 475px) {
+  .navbar__smallScreen__freeDemoClass {
+    display: none;
+  }
+
+  .results__cardContainer p {
+    width: 75px;
+    font-size: 9px;
+  }
+
+  .results__cardContainer .roundCorner {
+    border-radius: 0;
+  }
+}

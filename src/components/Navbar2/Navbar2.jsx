@@ -146,37 +146,42 @@ const Navbar = ({ whichActive }) => {
           //   // width: "100%",
           // }}
         >
-          <img height={"100%"} src={phone_call.src} alt="" />
-          <p
-            style={{
-              width: "max-content",
-              marginLeft: "0.5rem",
-              padding: "0",
-              color: "white",
-            }}
-            className={styles.linksText}
-          >
-            call now
-          </p>
+          <img src={phone_call.src} alt="" />
+          <a href="tel:+8975803664">
+            <p
+              style={{
+                width: "max-content",
+
+                color: "white",
+              }}
+              // className={styles.linksText}
+            >
+              call now
+            </p>
+          </a>
         </div>
 
         <div className="navbar__menuContainer">
           <GiHamburgerMenu
-            className="navbar__gihamMenu"
+            className="navbar__gihamMenu "
             onClick={() => setshouldShow(true)} //todo
           />
 
           {shouldShow && (
             <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
               <FaPencilRuler
-                fontSize={27}
+                // fontSize={27}
                 className="overlay__close"
                 onClick={() => setshouldShow(false)}
               />
 
               <div //this works really good
                 // onClick={() => setshouldShow(false)}
-                className={`${styles.navbar__links_container} navbar__links_container`}
+                className={`
+                
+               navbar__links_container
+                
+                navbar__links_container__smallscreen`}
                 style={{
                   display: "flex",
                   flexDirection: "column",
