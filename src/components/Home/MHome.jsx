@@ -91,11 +91,11 @@ const Card = ({ title, subTitle, desc, imgUrl, reversed, animRef }) => {
           {subTitle}
         </p>
         <p
-          className="pTextSmall"
+          className="pTextSmall Home__Card__para"
           style={{
             color: "white",
             textAlign: reversed ? "right" : "left",
-            width: "30%",
+            // width: "30%",
             lineHeight: "2.2rem",
             padding: 0,
             margin: 0,
@@ -129,7 +129,7 @@ const MHome = () => {
     let marginLeftConst = marginLeftVal;
     let counter = 1;
     let anim;
-    let shouldPlayCount = 0;
+    let shouldPlayCount = -1; // while testing -1. // in deployment 0
     let numOfImages = noOfImg - 1;
     function repeatAnimG() {
       // console.log(document.querySelector("#toAnimateHome").style["margin-left"]);
@@ -191,7 +191,7 @@ const MHome = () => {
   let marginLeftConst = marginLeftVal;
 
   let counter = 1;
-  let shouldPlayCount = 0;
+  let shouldPlayCount = -1; // while testing -1. // in deployment 0
   let numOfImages = 1;
   function repeatAnim() {
     // console.log(document.querySelector("#toAnimateHome").style["margin-left"]);
@@ -413,7 +413,7 @@ const MHome = () => {
                 flexDirection: "row",
                 width: "max-content",
                 // height: "100%",
-                height: "calc(100vh - 200px)",
+                // height: "calc(100vh - 200px)",
                 zIndex: 1,
               }}
             >

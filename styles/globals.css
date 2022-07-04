@@ -334,6 +334,10 @@ button:hover {
   height: 100%;
   margin-right: 5px;
 }
+/* .navbar__smallScreen__freeDemoClass p {
+  margin: 0;
+  padding: 0;
+} */
 
 @media screen and (max-width: 1300px) {
   .navbar__badge {
@@ -370,6 +374,10 @@ button:hover {
   .divider {
     width: 90%;
   }
+}
+
+.Home__Card__para {
+  width: 30%;
 }
 
 @media screen and (max-width: 897px) {
@@ -448,9 +456,9 @@ button:hover {
     height: 25px;
     /* font-size: 100px; */
   }
-  .navbar__smallScreen__freeDemoClass img {
-    height: 20px;
-  }
+  /* .navbar__smallScreen__freeDemoClass img {
+    height: 25px;
+  } */
 
   /* .navbar__smallScreen__freeDemoClass {
       font-size: 10px;
@@ -460,6 +468,10 @@ button:hover {
     font-size: 14px;
 
     /* padding: 50px 0; */
+  }
+
+  .navbar__smallScreen__freeDemoClass img {
+    height: 20px;
   }
 
   /* .results__toAnimateContainer {
@@ -487,9 +499,28 @@ button:hover {
 }
 
 @media screen and (max-width: 475px) {
-  .navbar__smallScreen__freeDemoClass {
-    display: none;
+  .results__wellDoneContainer .h1Text {
+    font-size: x-large;
   }
+
+  .results__wellDoneContainer .pTextSmall {
+    font-size: medium;
+  }
+
+  .navbar__smallScreen__freeDemoClass p {
+    font-size: x-small;
+  }
+  .navbar__smallScreen__freeDemoClass {
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .navbar__smallScreen__freeDemoClass img {
+    height: 15px;
+  }
+
+  /* .callNow__text {
+    display: none;
+  } */
 
   .results__cardContainer p {
     width: 75px;
@@ -499,4 +530,84 @@ button:hover {
   .results__cardContainer .roundCorner {
     border-radius: 0;
   }
+}
+
+/* fix form here. Results ka animated screen ka height here.
+Location card ka size here. */
+
+.LocCard__gmapContainer {
+  display: flex;
+  width: calc(400px * 0.75);
+  /* height: 300 * 0.75; */
+
+  /* height: 100px;  */
+
+  height: calc(300px * 0.75);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.LocCard__superContainer {
+  width: calc(400px * 0.75);
+  /* max-width: min-content; */
+  /* width: calc(400px * 0.75); */
+  /* height: 300 * 0.75; */
+  /* height: calc(300px * 0.75); */
+  height: 100%;
+}
+
+.LocCard__titleText {
+  font-size: medium;
+  width: 100%;
+}
+
+.LocCard__detailsText {
+  font-size: smaller;
+  width: 100%;
+}
+
+.LocCard__textContainer {
+  padding: 0 2rem;
+}
+
+/* .ContactUs__LocCardsContainer {
+  width: 100vw;
+} */
+
+.ContactUs__LocCardsContainer {
+  width: 100%;
+  /* margin: 0;
+  padding: 0; */
+}
+
+@media screen and (max-width: 670px) {
+  .formContainer {
+    width: 100vw;
+    padding: 1rem;
+  }
+  .LocCard__textContainer {
+    padding: 0 1rem;
+  }
+
+  .LocCard__superContainer {
+    /* width: 100vw; */
+    /* width: 1000px; */
+    width: calc(50vw - 32px);
+  }
+
+  .LocCard__gmapContainer {
+    width: 100%;
+    /* width: calc(400px * 0.6); */
+  }
+
+  .Home__Card__para {
+    width: 100%;
+  }
+
+  /* .LocCard__gmapContainer {
+    /* width: calc(400px * 0.3); */
+  /* height: 300 * 0.75; */
+  /* height: calc(300px * 0.3); */
+  /* }  */
 }

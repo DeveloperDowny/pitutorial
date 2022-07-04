@@ -132,7 +132,7 @@ const Navbar = ({ whichActive }) => {
                     : styles.text__underlined
                 }
               >
-                JOIN US
+                CAREER
               </a>
             </Link>
           </div>
@@ -148,9 +148,9 @@ const Navbar = ({ whichActive }) => {
           //   // width: "100%",
           // }}
         >
-          <img src={phone_call.src} alt="" />
+          <img className="callNow__icon" src={phone_call.src} alt="" />
           <Link href="tel:+8975803664">
-            <a>
+            <a className="callNow__text">
               <p
                 style={{
                   width: "max-content",
@@ -196,6 +196,7 @@ const Navbar = ({ whichActive }) => {
               >
                 <Link href="/results">
                   <a
+                    onClick={() => setshouldShow(false)}
                     className={
                       whichActive != "results"
                         ? styles.test
@@ -208,6 +209,7 @@ const Navbar = ({ whichActive }) => {
 
                 <Link href="/courses">
                   <a
+                    onClick={() => setshouldShow(false)}
                     className={
                       whichActive != "courses"
                         ? styles.test
@@ -219,6 +221,7 @@ const Navbar = ({ whichActive }) => {
                 </Link>
                 <Link href="/contact-us">
                   <a
+                    onClick={() => setshouldShow(false)}
                     className={
                       whichActive != "contactus"
                         ? styles.test
@@ -230,32 +233,43 @@ const Navbar = ({ whichActive }) => {
                 </Link>
                 <Link href="/join-us">
                   <a
+                    onClick={() => setshouldShow(false)}
                     className={
                       whichActive != "join_us"
                         ? styles.test
                         : styles.text__underlined
                     }
                   >
-                    JOIN US
+                    CAREER
                   </a>
                 </Link>
               </div>
 
               {/* <ul className="app__navbar-smallscreen_links">
                 <li className="p__opensans">
-                  <a href="#home">Home</a>
+                  <a
+                  
+                   onClick={() => setshouldShow(false)}href="#home">Home</a>
                 </li>
                 <li className="p__opensans">
-                  <a href="#about">About</a>
+                  <a
+                  
+                   onClick={() => setshouldShow(false)}href="#about">About</a>
                 </li>
                 <li className="p__opensans">
-                  <a href="#menu">Menu</a>
+                  <a
+                  
+                   onClick={() => setshouldShow(false)}href="#menu">Menu</a>
                 </li>
                 <li className="p__opensans">
-                  <a href="#awards">Awards</a>
+                  <a
+                  
+                   onClick={() => setshouldShow(false)}href="#awards">Awards</a>
                 </li>
                 <li className="p__opensans">
-                  <a href="#contact">Contact</a>
+                  <a
+                  
+                   onClick={() => setshouldShow(false)}href="#contact">Contact</a>
                 </li>
               </ul> */}
             </div>

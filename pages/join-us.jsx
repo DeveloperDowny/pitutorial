@@ -19,7 +19,7 @@ const JoinUs = () => {
       <div className={`offWhiteBg superContainer`}>
         <div className="formContainer">
           <div>
-            <Heading1 title={"Join Us"} />
+            <Heading1 title={"Career"} />
           </div>
           <p
             style={{
@@ -27,7 +27,7 @@ const JoinUs = () => {
             }}
             className="pTextSmall"
           >
-            Fill the following form to schedule a call
+            Fill the following form to apply for job
           </p>
 
           <InputField

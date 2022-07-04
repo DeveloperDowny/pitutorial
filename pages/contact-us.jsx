@@ -19,10 +19,20 @@ const ContactUs = () => {
             <Heading1 title={"Locations"} />
           </div>
           <div
-            className="flexCenter"
-            style={{ flexDirection: "row", flexWrap: "wrap" }}
+            className="flexCenter ContactUs__LocCardsContainer"
+            style={{
+              flexDirection: "row",
+              flexWrap: "wrap",
+              alignItems: "stretch",
+            }}
           >
-            <LocationCard mimg={JEE} title="Virar" />
+            <LocationCard
+              mimg={JEE}
+              add={
+                "Loonwat Compound 142 ghaswala estate near shastri nagar or soul select, opp. 24 carrot cinema, Mumbai, Maharashtra 400102"
+              }
+              title="Virar"
+            />
             <LocationCard mimg={JEE} title="Vasai" />
           </div>
         </div>

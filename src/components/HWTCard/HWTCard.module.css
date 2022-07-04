@@ -1,75 +1,79 @@
 .courseCard__image__container {
-    margin: 0 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    /* width: 100pz; */
-    /* width: 84px; */
-    /* height: 84px; */
-    /* position: relative; */
+  /* width: 100pz; */
+  /* width: 84px; */
+  /* height: 84px; */
+  /* position: relative; */
 }
 
 .courseCard {
-    padding: 1rem;
-    margin: 0.5rem;
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-        transition: all 0.5s ease;
+  padding: 1rem;
+  margin: 0.5rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  transition: all 0.5s ease;
 }
 
 .hwtCardContainer {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .pText {
-    margin: 0;
-    text-align: center;
-    font-size: 30pt;
-    font-family: 'Open sans', serif;
-    color: var(--blackAlternate)
+  margin: 0;
+  text-align: center;
+  font-size: 30pt;
+  font-family: "Open sans", serif;
+  color: var(--blackAlternate);
 }
 
 .pTextSmall {
-    margin: 0;
-    text-align: center;
-    font-size: 16pt;
-    font-family: 'Open sans', serif;
-    color: var(--blackAlternate)
+  margin: 0;
+  text-align: center;
+  font-size: 16pt;
+  font-family: "Open sans", serif;
+  color: var(--blackAlternate);
 }
 
 .courseCard:hover {
-    /* transform: translateY(-30px); */
-    /* transform: translateY(-30px); */
-    /* transform: rotate(30deg); */
-    transform: translate(0, -.5rem);
-    cursor: default;
+  /* transform: translateY(-30px); */
+  /* transform: translateY(-30px); */
+  /* transform: rotate(30deg); */
+  transform: translate(0, -0.5rem);
+  cursor: default;
 }
 
 @media screen and (max-width: 897px) {
+  .courseCard {
+    width: calc(12rem * 0.8);
+    height: calc(12rem * 0.8);
+  }
 
-    .courseCard {
-        width: calc(12rem*0.8);
-        height: calc(12rem*0.8);
+  .courseCard img {
+    width: 60px;
+    height: 60px;
+    /* width: 100%; */
+    /* height: 100%; */
+  }
 
-    }
-
-    .courseCard img {
-        width: 60px;
-        height: 60px;
-        /* width: 100%; */
-        /* height: 100%; */
-    }
-
-    /* .pText {
+  /* .pText {
         font-size: 2pt;
     } */
 
-    .pTextSmall {
-        font-size: 20px;
-    }
+  .pTextSmall {
+    font-size: 20px;
+  }
+}
 
-
+@media screen and (max-width: 475px) {
+  .courseCard {
+    width: calc(50vw - 32px);
+    /* width: calc(50vw * 0); */
+    height: calc(50vw - 32px);
+  }
 }
