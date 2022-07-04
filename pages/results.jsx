@@ -148,7 +148,7 @@ const Results = () => {
   useEffect(() => {
     // console.log("in use effect");
     shouldPlayCount += 1;
-    if (shouldPlayCount == 2) {
+    if (shouldPlayCount == 1) {
       const anim2 = gsap
         .to("#toAnimate", {
           marginLeft: `-${marginLeftVal}%`,

@@ -156,7 +156,7 @@ const MHome = () => {
     }
     useEffect(() => {
       shouldPlayCount += 1;
-      if (shouldPlayCount == 2) {
+      if (shouldPlayCount == 1) {
         anim2 = gsap
           .to(id, {
             marginLeft: `-${marginLeftVal}%`,
@@ -246,7 +246,7 @@ const MHome = () => {
   }
   useEffect(() => {
     shouldPlayCount += 1;
-    if (shouldPlayCount == 2) {
+    if (shouldPlayCount == 1) {
       anim6 = gsap.fromTo(
         [animRef1.current, animRef2.current, animRef3.current],
 
