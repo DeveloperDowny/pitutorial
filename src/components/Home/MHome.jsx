@@ -122,7 +122,7 @@ const Card = ({ title, subTitle, desc, imgUrl, reversed, animRef }) => {
 };
 
 const MHome = () => {
-  function animateThis(noOfImg, id) {
+  function AnimateThis(noOfImg, id) {
     const delayTime = 2;
     const dur = 0.5;
     let marginLeftVal = 100;
@@ -181,7 +181,7 @@ const MHome = () => {
     }, []);
   }
 
-  animateThis(3, "#toAnimateHomeHighlights");
+  AnimateThis(3, "#toAnimateHomeHighlights");
 
   const titleRef = useRef(null);
   const animRef1 = useRef(null);
