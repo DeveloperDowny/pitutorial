@@ -1,6 +1,7 @@
 import React from "react";
 import { pit_logo, pit_logo_bl } from "../../assets";
 import styles from "./Footer.module.css";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -29,12 +30,15 @@ const Footer = () => {
           }}
         >
           <p className={styles.pText}>Miscellaneous</p>
-          <a className={styles.footer__link} href="/results">
-            Results
-          </a>
-          <a className={styles.footer__link} href="/href">
-            Admissions
-          </a>
+          {/* <Link href="/contact-us"> todo
+
+           </Link> */}
+          <Link href="/results">
+            <a className={styles.footer__link}>Results</a>
+          </Link>
+          <Link href="/">
+            <a className={styles.footer__link}>Admissions</a>
+          </Link>
         </div>
 
         <div
@@ -45,24 +49,24 @@ const Footer = () => {
           }}
         >
           <p className={styles.pText}>Courses</p>
-          <a className={styles.footer__link} href="/courses">
-            {"JEE"}
-          </a>
-          <a className={styles.footer__link} href="/courses">
-            {"NEET"}
-          </a>
-          <a className={styles.footer__link} href="/courses">
-            {"CET"}
-          </a>
-          <a className={styles.footer__link} href="/courses">
-            {"CBSE 11th & 12th Science"}
-          </a>
-          <a className={styles.footer__link} href="/courses">
-            {"CBSE 8th to 10th"}
-          </a>
-          <a className={styles.footer__link} href="/courses">
-            {"Olympiad Exams"}
-          </a>
+          <Link href="/courses">
+            <a className={styles.footer__link}>{"JEE"}</a>
+          </Link>
+          <Link href="/courses">
+            <a className={styles.footer__link}>{"NEET"}</a>
+          </Link>
+          <Link href="/courses">
+            <a className={styles.footer__link}>{"CET"}</a>
+          </Link>
+          <Link href="/courses">
+            <a className={styles.footer__link}>{"CBSE 11th & 12th Science"}</a>
+          </Link>
+          <Link href="/courses">
+            <a className={styles.footer__link}>{"CBSE 8th to 10th"}</a>
+          </Link>
+          <Link href="/courses">
+            <a className={styles.footer__link}>{"Olympiad Exams"}</a>
+          </Link>
         </div>
         <div
           className="flexCenter"
@@ -72,21 +76,22 @@ const Footer = () => {
           }}
         >
           <p className={styles.pText}>Contact Us</p>
-          <a className={styles.footer__link} href="/contact-us">
-            Virar Branch
-          </a>
-          <a className={styles.footer__link} href="/contact-us">
-            Vasai Branch
-          </a>
-          <a
-            className={styles.footer__link}
+          <Link href="/contact-us">
+            <a className={styles.footer__link}>Virar Branch</a>
+          </Link>
+          <Link href="/contact-us">
+            <a className={styles.footer__link}>Vasai Branch</a>
+          </Link>
+          <Link
             href={`mailto:vedantpanchal12345@gmail.com?subject=Inquiry for Pi TUTORIAL`}
           >
-            {" Mail us at emailAdd@gmail.com"}
-          </a>
-          <a className={styles.footer__link} href="tel:+918975803664">
-            Call us at +91 782 1865 157
-          </a>
+            <a className={styles.footer__link}>
+              {" Mail us at emailAdd@gmail.com"}
+            </a>
+          </Link>
+          <Link href="tel:+918975803664">
+            <a className={styles.footer__link}>Call us at +91 782 1865 157</a>
+          </Link>
         </div>
       </div>
 
@@ -134,13 +139,11 @@ const Footer = () => {
           }}
         >
           Websie built by{" "}
-          <a
-            className={styles.footer__link}
-            href="https://www.linkedin.com/in/vedantpanchal/"
-            target="_blank"
-          >
-            <u>Vedant Panchal</u>
-          </a>
+          <Link href="https://www.linkedin.com/in/vedantpanchal/">
+            <a className={styles.footer__link} target="_blank" rel="noreferrer">
+              <u>Vedant Panchal</u>
+            </a>
+          </Link>
         </p>
         {/* <p>Copy rig</p> */}
       </div>
