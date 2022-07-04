@@ -42,18 +42,20 @@ const Navbar = ({ whichActive }) => {
       }}
     >
       <div>
-        <a href="/">
-          <img
-            className="navbar__pit_logo"
-            src={pit_logo.src}
-            style={{
-              height: "100%",
-              padding: "1rem",
-              // margin: "0 0 0 10rem"
-              marginLeft: "8vw",
-            }}
-          />
-        </a>
+        <Link href="/">
+          <a>
+            <img
+              className="navbar__pit_logo"
+              src={pit_logo.src}
+              style={{
+                height: "100%",
+                padding: "1rem",
+                // margin: "0 0 0 10rem"
+                marginLeft: "8vw",
+              }}
+            />
+          </a>
+        </Link>
       </div>
 
       <div
@@ -147,18 +149,20 @@ const Navbar = ({ whichActive }) => {
           // }}
         >
           <img src={phone_call.src} alt="" />
-          <a href="tel:+8975803664">
-            <p
-              style={{
-                width: "max-content",
+          <Link href="tel:+8975803664">
+            <a>
+              <p
+                style={{
+                  width: "max-content",
 
-                color: "white",
-              }}
-              // className={styles.linksText}
-            >
-              call now
-            </p>
-          </a>
+                  color: "white",
+                }}
+                // className={styles.linksText}
+              >
+                call now
+              </p>
+            </a>
+          </Link>
         </div>
 
         <div className="navbar__menuContainer">
@@ -257,52 +261,17 @@ const Navbar = ({ whichActive }) => {
             </div>
           )}
         </div>
-        {/* <div className="app__navbar-smallscreen">
-        <GiHamburgerMenu
-          color="#fff"
-          fontSize={27}
-          onClick={() => setToggleMenu(true)}
-        />
 
-        {toggleMenu && (
-          <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
-            <MdOutlineRestaurantMenu
-              fontSize={27}
-              className="overlay__close"
-              onClick={() => setToggleMenu(false)}
-            />
-
-            <ul className="app__navbar-smallscreen_links">
-              <li className="p__opensans">
-                <a href="#home">Home</a>
-              </li>
-              <li className="p__opensans">
-                <a href="#about">About</a>
-              </li>
-              <li className="p__opensans">
-                <a href="#menu">Menu</a>
-              </li>
-              <li className="p__opensans">
-                <a href="#awards">Awards</a>
-              </li>
-              <li className="p__opensans">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        )}
-      </div> */}
-        {/* <div>
-        <GiHamburgerMenu />
-      </div> */}
         <div className={`navbar__badge`}>
-          <a href="tel:+8975803664">
-            <img
-              className={`${styles.dropShadow}`}
-              src={badge.src}
-              style={{ height: "125%", margin: "-1px 3rem 0 0" }}
-            />
-          </a>
+          <Link href="tel:+8975803664">
+            <a>
+              <img
+                className={`${styles.dropShadow}`}
+                src={badge.src}
+                style={{ height: "125%", margin: "-1px 3rem 0 0" }}
+              />
+            </a>
+          </Link>
         </div>
       </div>
     </div>
