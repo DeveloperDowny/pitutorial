@@ -313,28 +313,44 @@ const MHome = () => {
   }, []);
   return (
     <div>
+      {/* starting div */}
       <Navbar whichActive={"none"} />
-      <div
-        className=""
+      <div //tinker this to add absolute position. etc
+        className="flexCenter dropShadow results__toAnimateContainer"
         style={{
-          // width: "100vw",
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
+          // width: "865px",
+          zIndex: "11",
+          background: "white",
+          // marginBottom: "3rem",
+          flexDirection: "row",
+          overflow: "hidden",
+          // overflowX: "scroll",
+          // scrollbarWidth: "none",
+          // scrollbarGutter: "none",
+
+          //  -ms-overfanimlow-style: "none",
+
+          height: "100vh",
+          width: "100vw",
+          // marginTop: "97px",
+          zIndex: -1,
           justifyContent: "flex-start",
           alignItems: "flex-start",
         }}
       >
         <div
           ref={titleRef}
-          id="toAnimateHome" //come back here
+          id="toAnimateHome" // div of toAnimateHome
           style={{
+            // position: "absolute",
+            // marginLeft: "-3rem", // animate this property
             display: "flex",
             flexDirection: "row",
             width: "max-content",
-            height: "100%",
-            zIndex: 1,
+            // overflowX: "scroll",
+            // overflowY: "hidden",
+            // msOverflowStyle: "none",
+            // scrollbarWidth: "none",
           }}
         >
           <Card
@@ -367,56 +383,50 @@ const MHome = () => {
             imgUrl={edited_aim_bg}
           />
         </div>
-        <div className="flexCenter offWhiteBg">
-          <div
-            className="mainContainer "
-            style={{
-              // width: "100%",
-              // height: "100vh",
-              marginTop: "100vh",
-              // background: "black",
-            }}
-          >
-            <Heading1 title={"Highlights"} />
-            {/* <img
-              style={{ objectFit: "contain", height: "50vh" }}
-              // height={"0%"}
-              src={our_services.src}
-            /> */}
-            <div
-              className="flexCenter roundCorner dropShadow"
-              style={{
-                overflow: "hidden",
-                marginBottom: "3rem",
-                justifyContent: "flex-start",
-                alignItems: "flex-start",
-                // width: "100vw",
-              }}
-              // style={{ width: "100%", display: "flex", flexDirection: "row" }}
-            >
-              <div
-                // ref={titleRef}
-                id="toAnimateHomeHighlights"
-                className={`${styles.highlights_container} `}
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  width: "max-content",
-                  // height: "100%",
-                  height: "calc(100vh - 200px)",
-                  zIndex: 1,
-                }}
-              >
-                <img src={results_1.src} />
-                <img src={courses.src} />
-                <img src={how_we_teach.src} />
-                <img src={results_1.src} />
+      </div>
+      <div className={`offWhiteBg superContainer`}>
+        <div
+          className="mainContainer"
+          style={{
+            marginTop: "100vh",
+          }}
+        >
+          <Heading1 title={"Highlights"} />
 
-                {/* <img src={JEE.src} /> */}
-                {/* <img src={JEE.src} /> */}
-                {/* <img src={JEE.src} /> */}
-              </div>
-              {/* <div
+          <div
+            className="flexCenter roundCorner dropShadow"
+            style={{
+              overflow: "hidden",
+              marginBottom: "3rem",
+              justifyContent: "flex-start",
+              alignItems: "flex-start",
+              // width: "100vw",
+            }}
+            // style={{ width: "100%", display: "flex", flexDirection: "row" }}
+          >
+            <div
+              // ref={titleRef}
+              id="toAnimateHomeHighlights"
+              className={`${styles.highlights_container} `}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                width: "max-content",
+                // height: "100%",
+                height: "calc(100vh - 200px)",
+                zIndex: 1,
+              }}
+            >
+              <img src={results_1.src} />
+              <img src={courses.src} />
+              <img src={how_we_teach.src} />
+              <img src={results_1.src} />
+
+              {/* <img src={JEE.src} /> */}
+              {/* <img src={JEE.src} /> */}
+              {/* <img src={JEE.src} /> */}
+            </div>
+            {/* <div
                 style={{
                   width: "50%",
                   // overflow: "hidden",
@@ -424,30 +434,147 @@ const MHome = () => {
                 }}
               ></div>
               <div style={{ width: "50%", background: "white" }}>tes</div> */}
-            </div>
           </div>
-          <Footer />
         </div>
+        <Footer />
       </div>
-      {/* <div className="flexCenter">
-        <div
-          className="mainContainer flexCenter"
-          style={{
-            marginTop: "100vh",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <div style={{ display: "flex" }}>
-            <div
-              style={{ width: "100%", height: "100vh", background: "black" }}
-            >
-              hbgyg
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
+    // <div>
+    //   <Navbar whichActive={"none"} />
+    //   <div
+    //     className=""
+    //     style={{
+    //       // width: "100vw",
+    //       width: "100%",
+    //       height: "100%",
+    //       display: "flex",
+    //       flexDirection: "column",
+    //       justifyContent: "flex-start",
+    //       alignItems: "flex-start",
+    //     }}
+    //   >
+    //     <div
+    //       ref={titleRef}
+    //       id="toAnimateHome" //come back here
+    //       style={{
+    //         display: "flex",
+    //         flexDirection: "row",
+    //         width: "max-content",
+    //         height: "100%",
+    //         zIndex: 1,
+    //       }}
+    //     >
+    //       <Card
+    //         animRef={animRef1}
+    //         title={"OUR MISSION"}
+    //         subTitle={"Is To Unlock Hidden Potential"}
+    //         desc={
+    //           "We believe that every student has hidden potential. We strive to unlock this potential."
+    //         }
+    //         imgUrl={edited_aim_bg}
+    //       />
+    //       <Card
+    //         animRef={animRef2}
+    //         title={"BETTER EDUCATION "}
+    //         subTitle={"For Better Future "}
+    //         desc={
+    //           "We give high quality education so that the future of your child is bright and secure."
+    //         }
+    //         reversed
+    //         imgUrl={how_bg}
+    //       />
+
+    //       <Card
+    //         animRef={animRef3}
+    //         title={"OUR MISSION"}
+    //         subTitle={"Is To Unlock Hidden Potential"}
+    //         desc={
+    //           "We believe that every student has hidden potential. We strive to unlock this potential."
+    //         }
+    //         imgUrl={edited_aim_bg}
+    //       />
+    //     </div>
+    //     <div className="flexCenter offWhiteBg">
+    //       <div
+    //         className="mainContainer "
+    //         style={{
+    //           // width: "100%",
+    //           // height: "100vh",
+    //           marginTop: "100vh",
+    //           // background: "black",
+    //         }}
+    //       >
+    //         <Heading1 title={"Highlights"} />
+    //         {/* <img
+    //           style={{ objectFit: "contain", height: "50vh" }}
+    //           // height={"0%"}
+    //           src={our_services.src}
+    //         /> */}
+    //         <div
+    //           className="flexCenter roundCorner dropShadow"
+    //           style={{
+    //             overflow: "hidden",
+    //             marginBottom: "3rem",
+    //             justifyContent: "flex-start",
+    //             alignItems: "flex-start",
+    //             // width: "100vw",
+    //           }}
+    //           // style={{ width: "100%", display: "flex", flexDirection: "row" }}
+    //         >
+    //           <div
+    //             // ref={titleRef}
+    //             id="toAnimateHomeHighlights"
+    //             className={`${styles.highlights_container} `}
+    //             style={{
+    //               display: "flex",
+    //               flexDirection: "row",
+    //               width: "max-content",
+    //               // height: "100%",
+    //               height: "calc(100vh - 200px)",
+    //               zIndex: 1,
+    //             }}
+    //           >
+    //             <img src={results_1.src} />
+    //             <img src={courses.src} />
+    //             <img src={how_we_teach.src} />
+    //             <img src={results_1.src} />
+
+    //             {/* <img src={JEE.src} /> */}
+    //             {/* <img src={JEE.src} /> */}
+    //             {/* <img src={JEE.src} /> */}
+    //           </div>
+    //           {/* <div
+    //             style={{
+    //               width: "50%",
+    //               // overflow: "hidden",
+    //               display: "flex",
+    //             }}
+    //           ></div>
+    //           <div style={{ width: "50%", background: "white" }}>tes</div> */}
+    //         </div>
+    //       </div>
+    //       <Footer />
+    //     </div>
+    //   </div>
+    //   {/* <div className="flexCenter">
+    //     <div
+    //       className="mainContainer flexCenter"
+    //       style={{
+    //         marginTop: "100vh",
+    //         alignItems: "center",
+    //         justifyContent: "center",
+    //       }}
+    //     >
+    //       <div style={{ display: "flex" }}>
+    //         <div
+    //           style={{ width: "100%", height: "100vh", background: "black" }}
+    //         >
+    //           hbgyg
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div> */}
+    // </div>
   );
 };
 
