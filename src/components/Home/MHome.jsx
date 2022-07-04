@@ -129,7 +129,7 @@ const MHome = () => {
     let marginLeftConst = marginLeftVal;
     let counter = 1;
     let anim;
-    let shouldPlayCount = -1; // while testing -1. // in deployment 0
+    let shouldPlayCount = -0; // while testing -1. // in deployment 0
     let numOfImages = noOfImg - 1;
     function repeatAnimG() {
       // console.log(document.querySelector("#toAnimateHome").style["margin-left"]);
@@ -191,7 +191,7 @@ const MHome = () => {
   let marginLeftConst = marginLeftVal;
 
   let counter = 1;
-  let shouldPlayCount = -1; // while testing -1. // in deployment 0
+  let shouldPlayCount = -0; // while testing -1. // in deployment 0
   let numOfImages = 1;
   function repeatAnim() {
     // console.log(document.querySelector("#toAnimateHome").style["margin-left"]);

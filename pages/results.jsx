@@ -114,7 +114,7 @@ const Results = () => {
   const dur = 2;
   let counter = 1;
   let anim;
-  let shouldPlayCount = -1; // while testing -1. // in deployment 0
+  let shouldPlayCount = -0; // while testing -1. // in deployment 0
   let numOfImages = 3;
   function repeatAnim() {
     if (counter > numOfImages) {
