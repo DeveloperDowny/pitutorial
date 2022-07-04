@@ -63,7 +63,7 @@ const JoinUs = () => {
           >
             <a
               href={`mailto:vedantpanchal12345@gmail.com?subject=${fullName}'s Job Application For Pi TUTORIAL&body=${
-                `Full Name:%0d%0a${fullName}%0d%0a%0d%0a` +
+                `Full Name:%0d%0a${fullName}%0d%0a%0d%0a` + //newline char
                 `Phone. No.:%0d%0a${phoneNo}%0d%0a%0d%0a` +
                 `Email Address:%0d%0a${emailAdd}%0d%0a%0d%0a` +
                 `About Me:%0d%0a${custom}%0d%0a%0d%0a<Attach your resume with this mail>`

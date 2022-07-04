@@ -54,13 +54,37 @@ const Courses = () => {
             <Heading1 title={"Courses"} />
           </div>
           <div className={`${styles.courses__courseCard__container}`}>
-            <CourseCard mimg={JEE} title={"JEE"} />
+            <CourseCard
+              mimg={JEE}
+              title={"JEE"}
+              desc="2 year long rigorous program to crack JEE (Mains/Advanced)"
+            />
 
-            <CourseCard mimg={NEET} title={"NEET"} />
-            <CourseCard mimg={CET} title={"CET"} />
-            <CourseCard mimg={college} title={"CBSE 11th & 12th Science"} />
-            <CourseCard mimg={school} title={"CBSE 8th to 10th"} />
-            <CourseCard mimg={SOF} title={"Olympiad Exams"} />
+            <CourseCard
+              mimg={NEET}
+              title={"NEET"}
+              desc="2 year long rigorous program to crack NEET"
+            />
+            <CourseCard
+              mimg={CET}
+              title={"CET"}
+              desc="2 year long rigorous program to crack CET"
+            />
+            <CourseCard
+              mimg={college}
+              title={"CBSE 11th & 12th Science"}
+              desc="2 year long rigorous program to ace board exams"
+            />
+            <CourseCard
+              mimg={school}
+              title={"CBSE 8th to 10th"}
+              desc="Tution classes standard wise to excel in academics"
+            />
+            <CourseCard
+              mimg={SOF}
+              title={"Olympiad Exams"}
+              desc="Training for competitive exams like NSO, NCO, IMO, etc.. Also for NTSE and scholarship examinations. "
+            />
           </div>
           <div>
             <Heading1 title={"How We Teach"} reversed />
@@ -69,12 +93,36 @@ const Courses = () => {
             style={{ marginBottom: "4rem" }}
             className={`${styles.courses__courseCard__container}`}
           >
-            <HWTCard title={"Experienced Faculty"} mimg={staff} />
-            <HWTCard title={"Basic to Advance"} mimg={basicsToAdvance} />
-            <HWTCard title={"Dedicated Doubt Solving"} mimg={doubtSolving} />
-            <HWTCard title={"Small Batches"} mimg={smallBatches} />
-            <HWTCard title={"Best Books Provided"} mimg={books} />
-            <HWTCard title={"Test Series"} mimg={tests} />
+            <HWTCard
+              title={"Experienced Faculty"}
+              mimg={staff}
+              desc="We have highly experienced faculty so that your child gets right guidance"
+            />
+            <HWTCard
+              title={"Basic to Advance"}
+              mimg={basicsToAdvance}
+              desc="We teach basics first then jump to advance so that your child's foundations are clear"
+            />
+            <HWTCard
+              title={"Dedicated Doubt Solving"}
+              mimg={doubtSolving}
+              desc="We have anytime doubt asking policy so that your child can practice without breaks"
+            />
+            <HWTCard
+              title={"Small Batches"}
+              mimg={smallBatches}
+              desc="We have classroom size of 15 to 20 students per batch so that your child gets individual attention"
+            />
+            <HWTCard
+              title={"Best Books Provided"}
+              mimg={books}
+              desc="We provide best study material for free"
+            />
+            <HWTCard
+              title={"Test Series"}
+              mimg={tests}
+              desc="We have subscriptions to high quality test taking softwares to train test taking behaviour of your child"
+            />
           </div>
         </div>
         <Footer />

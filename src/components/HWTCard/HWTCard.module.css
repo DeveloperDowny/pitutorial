@@ -11,7 +11,7 @@
 }
 
 .courseCard {
-  padding: 1rem;
+  /* padding: 1rem; */
   margin: 0.5rem;
   width: 12rem;
   height: 12rem;
@@ -66,7 +66,7 @@
     } */
 
   .pTextSmall {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
