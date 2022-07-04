@@ -317,7 +317,8 @@ const MHome = () => {
       <div
         className=""
         style={{
-          width: "100vw",
+          // width: "100vw",
+          width: "100%",
           height: "100%",
           display: "flex",
           flexDirection: "column",
@@ -327,7 +328,7 @@ const MHome = () => {
       >
         <div
           ref={titleRef}
-          id="toAnimateHome"
+          id="toAnimateHome" //come back here
           style={{
             display: "flex",
             flexDirection: "row",
@@ -389,8 +390,9 @@ const MHome = () => {
                 marginBottom: "3rem",
                 justifyContent: "flex-start",
                 alignItems: "flex-start",
+                // width: "100vw",
               }}
-              // style={{ width: "100%", display: "flex", flexDirection: "row", }}
+              // style={{ width: "100%", display: "flex", flexDirection: "row" }}
             >
               <div
                 // ref={titleRef}
