@@ -13,6 +13,8 @@ import styles from "../../../styles/MHome.module.css";
 import gsap from "gsap";
 import { useRef, useEffect } from "react";
 
+import { Image } from "next/image";
+
 const delayTime = 4;
 const dur = 1.5;
 let anim1;
@@ -105,6 +107,7 @@ const Card = ({ title, subTitle, desc, imgUrl, reversed, animRef }) => {
           {desc}
         </p>
       </div>
+
       <img
         style={{
           objectFit: "cover",

@@ -118,17 +118,18 @@ const Footer = () => {
           style={{
             // margin: "0 3rem",
             width: "100%",
+            fontSize: "xx-small",
           }}
         >
           © Copyright 2022, Pi TUTORIAL. All rights reserved.
         </p>
         <img
+          className="footer__greyLogoImg"
           src={pit_logo_bl.src}
           alt=""
-          width="15%"
           style={{
             objectFit: "contain",
-            margin: "0 3rem",
+            // margin: "0 3rem",
             // filter: "grayscale(1)",
           }}
         />
@@ -136,11 +137,20 @@ const Footer = () => {
           style={{
             //  margin: "0 3rem",
             width: "100%",
+            fontSize: "xx-small",
+            textAlign: "right",
           }}
         >
-          Websie built by{" "}
+          Website built by{" "}
           <Link href="https://www.linkedin.com/in/vedantpanchal/">
-            <a className={styles.footer__link} target="_blank" rel="noreferrer">
+            <a
+              className={styles.footer__link}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                fontSize: "xx-small",
+              }}
+            >
               <u>Vedant Panchal</u>
             </a>
           </Link>
